@@ -1,0 +1,1661 @@
+[
+  {
+    "id": "chunk_001",
+    "titulo": "O que é o SAF e como entrar em contato",
+    "sistema": ["geral"],
+    "categoria": "institucional",
+    "subcategoria": "contato_saf",
+    "acoes_zeev": [],
+    "canais": {
+      "telefone": "(16) 2018-2330",
+      "email": "saf@amorsaude.com",
+      "horario": "segunda a sexta, 08h30 às 17h00"
+    },
+    "conteudo": "O SAF (Serviço de Apoio à Franquia) é a estrutura central da AmorSaúde que conecta franquias a todos os setores internos da rede. Combina atendimento digital via BOT/IA com atendimento humanizado. Atua como ponte entre a franquia e áreas como BackOffice, Financeiro, AmorLab, Jurídico e Gestão de Rede.",
+    "instrucoes_fora_horario": "Fora do horário de atendimento, as demandas devem ser registradas nos sistemas (Zeev, Octadesk, Yungas) para retorno posterior.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "O que é o SAF?",
+      "Como entrar em contato com o SAF?",
+      "Qual o horário de atendimento do SAF?",
+      "Qual o telefone do SAF?",
+      "Como falar com o SAF fora do horário?"
+    ]
+  },
+  {
+    "id": "chunk_002",
+    "titulo": "Distinção crítica: Agenda (Medicina/Amei) vs Cadeira (Odontologia/WebDental)",
+    "sistema": ["amei", "webdental"],
+    "categoria": "regras_criticas",
+    "subcategoria": "terminologia_sistemas",
+    "acoes_zeev": [],
+    "conteudo": "Agenda é um termo exclusivo da Medicina (sistema Amei). Cadeira é um termo exclusivo da Odontologia (sistema WebDental). Nunca usar o menu de Cadeiras para resolver dúvidas de médicos. Nunca citar Agenda quando o assunto for dentista ou consultório.",
+    "regra_ambiguidade": "Se a pergunta for genérica ('como abrir uma agenda?'), perguntar ao usuário: 'Você se refere à Agenda de Medicina (Amei) ou à Cadeira de Odontologia (WebDental)?' antes de responder.",
+    "restricoes": [
+      "O Aplicativo CDT (Cartão de Todos) é uma ferramenta do PACIENTE — problemas em menus internos de Cadastro, Agenda ou Financeiro NÃO são causados por 'atraso entre sistema e aplicativo'",
+      "A justificativa de atraso entre sistema e aplicativo é proibida para erros em menus internos"
+    ],
+    "casos_validados": [],
+    "faq": [
+      "Qual a diferença entre agenda e cadeira?",
+      "O que é agenda no contexto da AmorSaúde?",
+      "O que é cadeira no contexto da AmorSaúde?",
+      "Posso abrir agenda para médico no WebDental?",
+      "Onde abro agenda de médico?",
+      "Onde abro cadeira de dentista?"
+    ]
+  },
+  {
+    "id": "chunk_003",
+    "titulo": "Árvore de decisão: qual sistema de chamado usar",
+    "sistema": ["zeev", "octadesk", "jira"],
+    "categoria": "chamados",
+    "subcategoria": "roteamento_chamados",
+    "acoes_zeev": ["A006", "A073", "A027", "A072", "A037", "A068", "A071", "A075"],
+    "mapeamento_chamados": {
+      "A006": "Cadastro de novos profissionais de saúde (Amei)",
+      "A073": "Cadastro de novos profissionais de saúde (WebDental)",
+      "A027": "Cadastro ou reativação de funcionários (Amei)",
+      "A072": "Cadastro ou reativação de funcionários (WebDental)",
+      "A037": "Inativação de funcionários ou profissionais (Amei)",
+      "A068": "Inativação de funcionários ou profissionais (WebDental)",
+      "A071": "Alterar percentual de comissão, valores de repasse ou negociações de profissionais e fornecedores já cadastrados (Amei e WebDental)",
+      "A075": "Alterações operacionais diversas: alterar e-mail de profissional, inclusão de nova negociação, solicitações que o suporte não faz diretamente",
+      "octadesk": "Somente erros técnicos e bugs no WebDental",
+      "jira": "Erros técnicos nos sistemas Amei, Feegow, Portal do Paciente e Aplicativo Cartão de Todos"
+    },
+    "email_especial": {
+      "destinatario": "wanderlucio.neves@amorsaude.com",
+      "uso_exclusivo": "Reset/acesso ao Octadesk",
+      "quem_pode_enviar": "Somente o SÓCIO da unidade"
+    },
+    "restricoes": [
+      "Nunca inventar códigos Zeev ou e-mails que não constem nos manuais"
+    ],
+    "casos_validados": [],
+    "faq": [
+      "Qual chamado abrir para alterar comissão de médico?",
+      "Como solicitar cadastro de profissional?",
+      "Onde abrir chamado para inativar funcionário?",
+      "Qual o fluxo Zeev para alterar e-mail de profissional?",
+      "Como reportar bug no WebDental?",
+      "Como reportar bug no Amei?",
+      "Onde abrir chamado para erro no sistema?"
+    ]
+  },
+  {
+    "id": "chunk_004",
+    "titulo": "Como alterar porcentagem ou valor de comissão de profissional",
+    "sistema": ["amei", "webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "comissao_profissional",
+    "acoes_zeev": ["A071"],
+    "conteudo": "Para alterar o percentual de comissão ou valores de repasse de profissionais já cadastrados, a clínica deve abrir um chamado no Zeev utilizando o fluxo A071 — Manutenção de custos de profissionais e fornecedores. Esse fluxo é válido tanto para o sistema Amei quanto para o WebDental.",
+    "restricoes": [
+      "O SAF não realiza essa alteração manualmente — é obrigatório o uso do Zeev A071"
+    ],
+    "casos_validados": [
+      {
+        "clinica": "Nova Venécia",
+        "descricao": "Perguntou como alterar porcentagens de cirurgias e endodontia de dentistas no WebDental",
+        "solucao": "Indicar Zeev A071"
+      }
+    ],
+    "faq": [
+      "Como alterar a porcentagem de comissão do dentista no WebDental?",
+      "Como mudar o valor que pago para o médico?",
+      "Como renegociar comissão de profissional?",
+      "Onde altero o percentual de endodontia do dentista?",
+      "Quero mudar o repasse do meu médico, como faço?",
+      "A071 para que serve?"
+    ]
+  },
+  {
+    "id": "chunk_005",
+    "titulo": "Como recuperar acesso ao Octadesk",
+    "sistema": ["octadesk"],
+    "categoria": "acesso_sistemas",
+    "subcategoria": "recuperacao_acesso",
+    "acoes_zeev": ["A075"],
+    "email_especial": {
+      "destinatario": "wanderlucio.neves@amorsaude.com",
+      "uso": "Reset ou novo acesso ao Octadesk",
+      "quem_pode_enviar": "Somente o SÓCIO da unidade",
+      "uso_exclusivo": true
+    },
+    "conteudo": "Quando a clínica perde o acesso ao Octadesk ou não consegue redefinir a senha, o SÓCIO da unidade deve enviar um e-mail diretamente para wanderlucio.neves@amorsaude.com solicitando o reset ou novo acesso. Para alterar apenas o e-mail de acesso de um profissional ao Octadesk, abrir chamado no Zeev A075.",
+    "restricoes": [
+      "O SAF não realiza essa ação diretamente",
+      "O e-mail de Wanderlúcio é exclusivo para reset/acesso ao Octadesk — nunca deve ser compartilhado para outras finalidades"
+    ],
+    "casos_validados": [
+      {
+        "clinica": "Várzea Paulista",
+        "protocolo": "254017",
+        "responsavel": "Geisa",
+        "descricao": "Sem acesso ao Octadesk e sem receber e-mail de redefinição de senha",
+        "solucao": "Sócio envia e-mail para wanderlucio.neves@amorsaude.com"
+      }
+    ],
+    "faq": [
+      "Como recuperar acesso ao Octadesk?",
+      "Não estou recebendo e-mail de redefinição de senha do Octadesk",
+      "Perdi o acesso ao Octadesk, o que fazer?",
+      "Quem resolve problema de login no Octadesk?",
+      "Como resetar senha do Octadesk?"
+    ]
+  },
+  {
+    "id": "chunk_006",
+    "titulo": "Procedimento não aparece no sistema",
+    "sistema": ["amei", "webdental"],
+    "categoria": "cadastro",
+    "subcategoria": "procedimentos_exames",
+    "acoes_zeev": ["A075"],
+    "conteudo": "Se a clínica tenta cadastrar ou vincular um procedimento/exame e ele não aparece na lista ou no seletor do sistema, a causa é ausência de cadastro ou falha na precificação. A solução é abrir chamado no Zeev A075 — Solicitações Operacionais — BackOffice, especificando 'Cadastro de novo procedimento em sistema'.",
+    "causa_raiz": "Especialidades ou procedimentos que sumiram da unidade têm causa obrigatória em falta de precificação ou erro de vínculo no cadastro.",
+    "restricoes": [
+      "O SAF não cadastra procedimentos diretamente",
+      "Nunca justificar como 'atraso na atualização'"
+    ],
+    "casos_validados": [],
+    "faq": [
+      "O procedimento não está aparecendo no sistema, o que fazer?",
+      "Fui cadastrar um exame e ele não consta na lista",
+      "Especialidade sumiu do sistema",
+      "Procedimento não aparece no seletor ao agendar",
+      "Como incluir novo procedimento no Amei?",
+      "Como cadastrar novo exame no sistema?"
+    ]
+  },
+  {
+    "id": "chunk_007",
+    "titulo": "Amei — Abertura de agenda médica (grade de horários)",
+    "sistema": ["amei"],
+    "categoria": "agenda_medica",
+    "subcategoria": "abertura_grade",
+    "acoes_zeev": [],
+    "caminho_sistema": "Cadastro > Lista de Profissionais > selecionar o profissional > Horários de Atendimento > Incluir",
+    "pre_requisitos": [
+      "Os procedimentos de agenda do profissional devem estar cadastrados na aba 'Procedimentos de Agenda' antes de abrir a grade"
+    ],
+    "campos_obrigatorios": [
+      "Dias da semana (flegados)",
+      "Hora inicial",
+      "Hora final",
+      "Unidade",
+      "Local (consultório)",
+      "Vigência início",
+      "Vigência fim"
+    ],
+    "conteudo": "Para abrir a agenda (grade de horários) de um profissional médico no sistema Amei, acessar: Cadastro > Lista de Profissionais > selecionar o profissional > Horários de Atendimento > clicar em Incluir.",
+    "causa_procedimento_nao_aparece": "Se o procedimento não aparece ao tentar abrir a grade mesmo estando cadastrado, verificar se está precificado corretamente na Tabela de Preços Parcerias (modalidades Cartão de Todos e Particular). Ausência de precificação impede a exibição do procedimento no agendamento.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como abrir agenda de médico no Amei?",
+      "Como criar grade de horários para médico?",
+      "Não consigo abrir agenda do profissional",
+      "Por que o procedimento não aparece ao abrir a grade?",
+      "Como configurar os dias que o médico vai atender?",
+      "Onde cadastro os horários de atendimento do profissional?"
+    ]
+  },
+  {
+    "id": "chunk_008",
+    "titulo": "Amei — Grade aberta mas dias da semana não flegados",
+    "sistema": ["amei"],
+    "categoria": "agenda_medica",
+    "subcategoria": "problema_grade",
+    "acoes_zeev": [],
+    "conteudo": "Um erro frequente ao abrir a agenda médica no Amei é criar a grade sem selecionar corretamente os dias da semana. Quando isso acontece, os dias ficam 'indisponíveis' mesmo com grade aberta. A solução é editar a grade existente (ou excluir e criar novamente) e garantir que os dias da semana em que o profissional atende estejam marcados (flegados).",
+    "solucao": "Editar a grade existente ou excluir e criar novamente, garantindo que os dias da semana estejam marcados.",
+    "restricoes": [],
+    "casos_validados": [
+      {
+        "protocolo": "228532",
+        "clinica": "BH Minas Shopping",
+        "descricao": "Clínica não conseguia clicar nos dias de fevereiro para o Dr. Thiago Leão (ortopedista). Os dias 02/02, 03/02 e 05/02 já tinham grade aberta, mas as quartas-feiras não estavam flegadas",
+        "solucao": "A clínica excluiu a grade, lançou novamente com os dias corretos e funcionou"
+      }
+    ],
+    "faq": [
+      "O sistema indisponibiliza clicar nos dias da agenda",
+      "Não consigo abrir a agenda em dias específicos",
+      "A agenda está aberta mas os dias aparecem bloqueados",
+      "Como corrigir grade de médico com dias errados?",
+      "O que fazer quando não é possível clicar na data da agenda?"
+    ]
+  },
+  {
+    "id": "chunk_009",
+    "titulo": "Amei — Procedimento não aparece na grade após vinculação no Zeev",
+    "sistema": ["amei"],
+    "categoria": "agenda_medica",
+    "subcategoria": "problema_procedimento_grade",
+    "acoes_zeev": ["A069", "A075"],
+    "conteudo": "Quando a clínica vincula um procedimento via chamado no Zeev e o procedimento ainda não aparece após o chamado finalizado, verificar: (1) se o profissional está com o procedimento cadastrado em 'Procedimentos de Agenda'; (2) se o profissional está vinculado como fornecedor com os valores de repasse cadastrados em Cadastro > Fornecedores > Procedimentos de Fornecedores. Sem o vínculo de fornecedor com custo cadastrado, o sistema não permite abrir a grade para aquele procedimento.",
+    "checklist_verificacao": [
+      "Procedimento cadastrado em 'Procedimentos de Agenda' do profissional?",
+      "Profissional vinculado como fornecedor?",
+      "Valores de repasse cadastrados em Cadastro > Fornecedores > Procedimentos de Fornecedores?"
+    ],
+    "solucao_cache": "Limpar o cache do navegador com CTRL+SHIFT+R pode resolver o problema após vínculo correto.",
+    "restricoes": [],
+    "casos_validados": [
+      {
+        "protocolo": "242683",
+        "clinica": "Santo Antônio de Jesus",
+        "descricao": "Clínica abriu chamados A075 e A069 para vincular 'Consulta Clínica Médica'. O procedimento apareceu brevemente e sumiu. SAF vinculou novamente em procedimentos de fornecedores. Mesmo após o vínculo, a grade não salvava.",
+        "solucao": "Limpar o cache do navegador (CTRL+SHIFT+R) resolveu o problema"
+      }
+    ],
+    "faq": [
+      "Vinculei o procedimento mas não aparece na grade",
+      "Abri chamado no Zeev mas o procedimento ainda não aparece",
+      "Procedimento apareceu e depois sumiu da agenda",
+      "Consulta Clínica Médica não aparece nos procedimentos de agenda",
+      "Sessão de Psiquiatria Individual não aparece para vincular na agenda"
+    ]
+  },
+  {
+    "id": "chunk_010",
+    "titulo": "Amei — Limpeza de cache como solução para problemas visuais",
+    "sistema": ["amei"],
+    "categoria": "suporte_tecnico",
+    "subcategoria": "cache_navegador",
+    "acoes_zeev": [],
+    "solucao_primaria": "CTRL+SHIFT+R para limpar o cache e recarregar a página",
+    "quando_usar": "Quando o sistema apresenta comportamento inesperado visual: procedimentos que apareceram e desapareceram, grades que não carregam, dados que não atualizam após alterações.",
+    "escalacao": "Se o problema persistir após limpeza de cache, acionar suporte técnico do Amei via chat (ícone no canto inferior direito do sistema) ou abrir chamado no Jira.",
+    "restricoes": [],
+    "casos_validados": [
+      {
+        "protocolo": "242683",
+        "descricao": "Após vínculo correto de procedimento, grade ainda não salvava",
+        "solucao": "Limpeza de cache resolveu completamente"
+      }
+    ],
+    "faq": [
+      "O Amei está com comportamento estranho, o que fazer?",
+      "Como resolver problema visual no sistema Amei?",
+      "A grade não aparece mesmo após configurar",
+      "Como atualizar o sistema Amei sem precisar de suporte?",
+      "O sistema não está carregando corretamente"
+    ]
+  },
+  {
+    "id": "chunk_011",
+    "titulo": "Amei — Conflito de agenda entre unidades (profissional em duas clínicas)",
+    "sistema": ["amei"],
+    "categoria": "agenda_medica",
+    "subcategoria": "conflito_grade_unidades",
+    "acoes_zeev": [],
+    "mensagem_erro": "Erro ao deletar grade — Não foi possível excluir a grade, pois existem pacientes agendados. Por favor, efetue o remanejamento das agendas e tente novamente.",
+    "fluxo_resolucao": [
+      "1. A unidade que tem a grade ativa deve primeiro bloquear os horários para impedir novos agendamentos",
+      "2. Depois acionar o suporte técnico do Amei via chat para solicitar a exclusão da grade com pacientes"
+    ],
+    "restricoes": [
+      "Somente a unidade responsável pela grade pode realizar essas ações",
+      "O SAF não tem acesso para excluir grades de outras unidades"
+    ],
+    "casos_validados": [
+      {
+        "protocolo": "242837",
+        "clinica_afetada": "Porto Alegre Norte",
+        "clinica_com_grade": "Porto Alegre Sul",
+        "descricao": "Profissional psicólogo com grade aberta na unidade Porto Alegre Sul que não conseguia excluir. A unidade Porto Alegre Norte não conseguia abrir nova grade por conflito.",
+        "solucao": "Unidade Porto Alegre Sul deve acionar suporte Amei via chat após ter feito o bloqueio"
+      }
+    ],
+    "faq": [
+      "Erro ao deletar grade no Amei",
+      "Não consigo excluir a agenda porque há pacientes agendados",
+      "Profissional está em outra clínica e não consigo abrir a agenda aqui",
+      "Como resolver conflito de grade entre unidades?",
+      "A outra unidade não consegue excluir a agenda do profissional"
+    ]
+  },
+  {
+    "id": "chunk_012",
+    "titulo": "Amei — Prontuários pendentes de assinatura digital sem aparecer",
+    "sistema": ["amei"],
+    "categoria": "prontuario",
+    "subcategoria": "assinatura_digital",
+    "acoes_zeev": [],
+    "conteudo": "Quando um médico relata que o sistema mostra prontuários aguardando assinatura mas, ao buscar os atendimentos, nada aparece na lista, o problema é de natureza técnica no sistema Amei.",
+    "solucao": "Acionar o suporte técnico do Amei via chat (ícone no canto inferior direito do sistema) para que a equipe verifique a inconsistência de dados.",
+    "restricoes": [
+      "O SAF não tem autonomia para resolver inconsistências de dados no banco do Amei"
+    ],
+    "casos_validados": [],
+    "faq": [
+      "Médico está com prontuários para assinar mas não aparecem",
+      "Assinaturas pendentes não aparecem no Amei",
+      "O sistema diz que tem atendimentos para assinar mas a lista está vazia",
+      "Como resolver prontuário que não aparece para assinatura?"
+    ]
+  },
+  {
+    "id": "chunk_013",
+    "titulo": "Amei — Erro ORA-01841 (erro de data no banco de dados)",
+    "sistema": ["amei"],
+    "categoria": "suporte_tecnico",
+    "subcategoria": "erros_banco_dados",
+    "acoes_zeev": [],
+    "codigo_erro": "ORA-01841",
+    "descricao_erro": "Erro de integridade de data no banco de dados do Amei. Indica inconsistência no formato da data/ano no cadastro da grade.",
+    "solucao": "Orientar a correção manual no menu Cadastro > Profissionais, verificando o formato das datas de vigência da grade. Se o erro persistir, acionar o suporte técnico via Jira.",
+    "restricoes": [
+      "Nunca justificar como 'atraso na atualização entre o sistema e o aplicativo'",
+      "A justificativa de atraso só é válida para erros de sincronização (agenda que não aparece no app ou troca de horários entre sistema e app) — nunca para erros de código ORA-XXXX"
+    ],
+    "casos_validados": [],
+    "faq": [
+      "Erro ORA-01841 no Amei",
+      "Erro de data ao salvar grade de profissional",
+      "O sistema retorna erro de ano inválido",
+      "Como resolver erro de banco de dados no Amei?"
+    ]
+  },
+  {
+    "id": "chunk_014",
+    "titulo": "WebDental — Acesso e inativação de login",
+    "sistema": ["webdental"],
+    "categoria": "acesso_sistemas",
+    "subcategoria": "login_webdental",
+    "acoes_zeev": ["A072", "A073"],
+    "url_acesso": "https://sistema.webdentalsolucoes.io/",
+    "conteudo": "Login e senha são fornecidos pelo BackOffice via chamado no Zeev. Logins sem uso por mais de 45 dias são automaticamente inativados pelo sistema.",
+    "como_verificar_login_inativo": "Configurações > Prestadores > pesquisar o nome ou login. Se inativado, aparecerá a mensagem 'Bloqueado'.",
+    "como_reativar": {
+      "profissionais": "Zeev A073",
+      "funcionarios": "Zeev A072"
+    },
+    "regra_unidade_nao_aparece": "Se a unidade não aparece na lista de seleção do login, assumir que o login foi inativado e direcionar para o Zeev A072.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Não consigo acessar o WebDental",
+      "Meu login no WebDental está bloqueado",
+      "A unidade não aparece para selecionar no WebDental",
+      "Como reativar um usuário inativo no WebDental?",
+      "Por que meu acesso ao WebDental foi suspenso?",
+      "Como recuperar senha do WebDental?"
+    ]
+  },
+  {
+    "id": "chunk_015",
+    "titulo": "WebDental — Abertura de cadeira/agenda odontológica",
+    "sistema": ["webdental"],
+    "categoria": "agenda_odontologica",
+    "subcategoria": "abertura_cadeira",
+    "acoes_zeev": [],
+    "caminho_sistema": "Configurações > Agenda > Cadeiras",
+    "campos": [
+      "Data de abertura",
+      "Cadeira disponível",
+      "Prestador",
+      "Data fim (até 1 ano de antecedência, para evitar abertura semanal repetitiva)",
+      "Hora fim"
+    ],
+    "dica_horario": "Se o dentista atende das 8h às 18h, abrir em dois blocos: manhã (8h às 12h) e tarde (13h às 18h).",
+    "permissoes_necessarias": "Apenas perfis de Coordenação ou Gerente podem realizar esta ação.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como abrir cadeira para dentista no WebDental?",
+      "Como disponibilizar agenda odontológica?",
+      "Onde configuro o horário de atendimento do dentista?",
+      "Como abrir agenda no WebDental?",
+      "Cadeira do dentista não está disponível, como resolver?"
+    ]
+  },
+  {
+    "id": "chunk_016",
+    "titulo": "WebDental — Bloqueio de agenda/cadeira/horário",
+    "sistema": ["webdental"],
+    "categoria": "agenda_odontologica",
+    "subcategoria": "bloqueio_agenda",
+    "acoes_zeev": [],
+    "caminho_sistema": "Agenda > Agenda do Dia > Prestador > Data > Compromisso do Prestador",
+    "passos": [
+      "Selecionar Prestador",
+      "Selecionar Data",
+      "Clicar em Compromisso do Prestador",
+      "Selecionar Período",
+      "Selecionar Motivo",
+      "Selecionar Horário",
+      "Incluir o motivo do bloqueio",
+      "Clicar em Salvar"
+    ],
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como bloquear agenda de dentista no WebDental?",
+      "Como impedir agendamentos em horário específico?",
+      "Como colocar compromisso na agenda do dentista?",
+      "Como bloquear um dia inteiro no WebDental?"
+    ]
+  },
+  {
+    "id": "chunk_017",
+    "titulo": "WebDental — Comissão do prestador: conceito e visualização",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "comissao_prestador",
+    "acoes_zeev": [],
+    "caminho_sistema": "Conta Corrente Prestador > Painel de Produção",
+    "campos_filtro": ["Data início", "Data fim", "Unidade", "Prestador", "Tipo de tratamento"],
+    "legenda_cores": {
+      "azul_branco": "Procedimento finalizado, ainda não pago ao dentista",
+      "verde": "Procedimento finalizado e já pago ao dentista",
+      "vermelho": "Procedimento finalizado, pago ao dentista, com repetição registrada"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como ver a comissão do dentista no WebDental?",
+      "Como consultar o painel de produção do prestador?",
+      "O que significa azul na conta corrente prestador?",
+      "Como saber o que já foi pago ao dentista?"
+    ]
+  },
+  {
+    "id": "chunk_018",
+    "titulo": "WebDental — Comissão zerada ou abaixo do esperado",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "problema_comissao",
+    "acoes_zeev": [],
+    "checklist_verificacao": [
+      "1. Tratamento de paciente de plano odontológico? → Comissão só é liberada após envio e validação da GTO",
+      "2. Tratamento de Implantodontia com pagamento parcelado? → Comissão é repassada parcelada conforme cronograma de pagamento do paciente"
+    ],
+    "como_verificar_implantodontia": "Financeiro > NOVO - Conta Corrente Paciente (verificar data de cada parcela)",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Por que a comissão do dentista está zerada?",
+      "Comissão do prestador não aparece no sistema",
+      "A comissão está menor do que o esperado, por quê?",
+      "Como liberar comissão de paciente de plano odontológico?",
+      "O dentista finalizou o tratamento mas não aparece pagamento"
+    ]
+  },
+  {
+    "id": "chunk_019",
+    "titulo": "WebDental — Comissão de implantodontia (pagamento parcelado)",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "comissao_implantodontia",
+    "acoes_zeev": [],
+    "conteudo": "Na Implantodontia, a comissão ao dentista não é paga de uma vez ao finalizar o tratamento. Ela segue o cronograma de pagamento do paciente: se o paciente paga à vista, o dentista recebe de uma vez; se parcelou, o dentista recebe mês a mês conforme as parcelas são recebidas.",
+    "como_verificar": "Financeiro > NOVO - Conta Corrente Paciente > localizar a data de recebimento de cada parcela > buscar na Conta Corrente Prestador por essa data.",
+    "restricoes": [
+      "PRÁTICA PROIBIDA: Nunca lançar o valor pago pelo paciente como bônus e depois aprovar o tratamento para gerar comissão integral antecipada — isso fere as regras da Franqueadora e o sistema WebDental"
+    ],
+    "casos_validados": [],
+    "faq": [
+      "O implantodontista finalizou o tratamento mas não aparece na conta corrente",
+      "Comissão de implante não está sendo paga",
+      "O repasse do implantodontista está incompleto",
+      "Como funciona o pagamento de comissão de implante?"
+    ]
+  },
+  {
+    "id": "chunk_020",
+    "titulo": "WebDental — GTO (Guia de Tratamento Odontológico) e comissão de plano",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "gto_plano_odontologico",
+    "acoes_zeev": [],
+    "conteudo": "Para atendimentos de pacientes de plano odontológico (DentalVidas), a comissão do prestador só é liberada na Conta Corrente do Prestador após o envio e validação da GTO no WebDental. Sem a GTO enviada e aprovada, o sistema não libera a comissão independentemente do atendimento ter sido realizado.",
+    "caminhos_consulta": {
+      "geral": "Convênio > Tratamentos Dentalvidas (Envio/Lote/NF/Pagamentos)",
+      "ortodontia": "Convênio > Tratamentos Dentalvidas ORTO"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Comissão de dentista está zerada para paciente de plano",
+      "O que é GTO no WebDental?",
+      "Como enviar GTO no WebDental?",
+      "Por que a comissão de plano odontológico não aparece?"
+    ]
+  },
+  {
+    "id": "chunk_021",
+    "titulo": "WebDental — Comissão por indicação de pacientes (fichas rosa)",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "comissao_indicacao",
+    "acoes_zeev": [],
+    "conteudo": "O WebDental permite que dentistas recebam comissão de 1% sobre o valor de tratamentos que indicaram para outras especialidades.",
+    "condicoes": [
+      "A indicação deve ser lançada corretamente pelo prestador no sistema",
+      "O dentista deve atingir ticket médio mínimo de R$ 20,00 por paciente único"
+    ],
+    "quando_creditar": "Valores de indicações convertidas são creditados na Conta Corrente do Prestador após o fechamento do mês seguinte.",
+    "caminho_acompanhamento": "WebDental > CAPTAÇÃO > Controle de Indicações - DENTISTA",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como funciona a comissão por indicação de paciente no WebDental?",
+      "O dentista pode ganhar por indicar pacientes para outro especialista?",
+      "O que são fichas rosa no WebDental?",
+      "Como acompanhar as indicações do dentista?"
+    ]
+  },
+  {
+    "id": "chunk_022",
+    "titulo": "WebDental — Repetição de procedimento e estorno de comissão",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "repeticao_procedimento",
+    "acoes_zeev": [],
+    "fluxo_por_periodo": {
+      "mes_anterior": "A clínica libera manualmente a repetição da comissão no sistema para o novo profissional receber",
+      "mes_vigente": "A clínica abre chamado no Octadesk solicitando o cancelamento da finalização; após cancelamento, o dentista que refez realiza nova finalização"
+    },
+    "resultado_financeiro": "O dentista original terá um débito (vermelho) na Conta Corrente. O dentista que refez receberá o crédito.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Um dentista refez um procedimento, como fica a comissão?",
+      "Como cancelar a comissão de um procedimento refeito?",
+      "O procedimento foi refeito por outro dentista, o que fazer no sistema?",
+      "Como corrigir comissão de repetição de procedimento?"
+    ]
+  },
+  {
+    "id": "chunk_023",
+    "titulo": "WebDental — Acompanhamento de protéticos (fluxo dos 3 status)",
+    "sistema": ["webdental"],
+    "categoria": "protéticos",
+    "subcategoria": "gestao_proteticos",
+    "acoes_zeev": [],
+    "caminho_sistema": "Relatórios > Orçamentos/Tratamentos > Gastos Protéticos",
+    "status": {
+      "1_pendente_liberar": {
+        "descricao": "Modelo devolvido pelo laboratório, pronto para uso",
+        "acao": "Selecionar paciente e laboratório, clicar em 'Liberar Protéticos'"
+      },
+      "2_protetico_nao_pago": {
+        "descricao": "Modelo recebido, pagamento ao laboratório pendente",
+        "acao": "Selecionar paciente e forma de pagamento, clicar em 'Pagar' (gera débito automático na conta da clínica)"
+      },
+      "3_protetico_pago": {
+        "descricao": "Consulta de modelos já pagos"
+      }
+    },
+    "cancelamento_pagamento_errado": "Filtrar por 'Protético Pago' > selecionar paciente errado > clicar em 'Cancelar Pagamento/Repetições'.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como liberar protético no WebDental?",
+      "Como pagar o laboratório de prótese no sistema?",
+      "O que é protético não pago no WebDental?",
+      "Como cancelar pagamento de protético feito para paciente errado?",
+      "Como acompanhar o status dos modelos protéticos?"
+    ]
+  },
+  {
+    "id": "chunk_024",
+    "titulo": "WebDental — Tabelas de intervenções (valores de venda)",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "tabela_intervencoes",
+    "acoes_zeev": ["A071"],
+    "caminho_sistema": "Configurações > Tabela de Intervenções (somente Coordenação e Gerência)",
+    "dica_busca": "Usar CTRL+F dentro da tabela para buscar intervenção específica. Tabelas com letra 'w' na frente estão inativadas.",
+    "regras_permissao": {
+      "tipo_1": "Valor bloqueado: sem possibilidade de alteração",
+      "tipo_2": "Permissão de 3x a 4x o valor do protético",
+      "tipo_3": "Ajuste dentro de 25% do valor base",
+      "tipo_4": "Alteração somente via solicitação formal ao suporte (Zeev A071)"
+    },
+    "regra_margem": "Após atualizar o valor do protético, sempre conferir e atualizar a tabela de intervenções. O valor da intervenção deve ser de 3x a 4x o valor pago ao laboratório para garantir margem de lucro.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como consultar a tabela de preços de procedimentos no WebDental?",
+      "Como alterar o valor de um procedimento odontológico?",
+      "Onde fica a tabela de intervenções no WebDental?",
+      "Posso alterar qualquer valor na tabela de intervenções?"
+    ]
+  },
+  {
+    "id": "chunk_025",
+    "titulo": "WebDental — Cadastro de laboratório de protético ou radiologia",
+    "sistema": ["webdental"],
+    "categoria": "cadastro",
+    "subcategoria": "laboratorio_parceiro",
+    "acoes_zeev": ["A069", "A071", "A068"],
+    "mapeamento_acoes": {
+      "A069": "Cadastrar novo laboratório — Solicitação de cadastro de fornecedores locais de exames e procedimentos",
+      "A071": "Atualizar valores de laboratório já cadastrado — Manutenção de custos de profissionais e fornecedores",
+      "A068": "Desativar laboratório — Solicitação de inativação de profissionais ou fornecedores"
+    },
+    "caminhos_consulta": {
+      "proteticos": "Configurações > Tabela de Protéticos",
+      "radiologias": "Configurações > Tabela de Radiologias"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como cadastrar um novo laboratório de prótese no WebDental?",
+      "Como atualizar os valores do laboratório de radiologia?",
+      "Como desativar um laboratório parceiro no WebDental?",
+      "Qual chamado Zeev abre para cadastro de laboratório?"
+    ]
+  },
+  {
+    "id": "chunk_026",
+    "titulo": "WebDental — Relatório Consolidado do Dia (fechamento de caixa)",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "fechamento_caixa",
+    "acoes_zeev": [],
+    "descricao": "O Consolidado do Dia é o principal relatório de fechamento diário de caixa das clínicas odontológicas.",
+    "legenda_cores": {
+      "azul": "Recebimentos em dinheiro/Pix do dia",
+      "verde": "Valores previstos para crédito em cartão e Pix via maquininha (exige conciliação bancária)",
+      "vermelho": "Despesas lançadas",
+      "amarelo": "Tratamentos aprovados com cartão com data futura de crédito por parcela"
+    },
+    "dica": "Recomenda-se conferir os canhotos de cartão junto ao relatório e anotar o nome do paciente no comprovante.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como fazer o fechamento de caixa no WebDental?",
+      "O que é o Consolidado do Dia?",
+      "Como conferir os recebimentos do dia no WebDental?",
+      "O que significam as cores no Consolidado do Dia?"
+    ]
+  },
+  {
+    "id": "chunk_027",
+    "titulo": "WebDental — Conta Corrente da Clínica (dinheiro e banco)",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "conta_corrente_clinica",
+    "acoes_zeev": [],
+    "caminho_sistema": "Financeiro > Conta Corrente da Clínica",
+    "tipos_conta": {
+      "conta_dinheiro": "Cabeçalho azul — entradas e saídas apenas em dinheiro",
+      "conta_banco": "Cabeçalho verde, em 'Transações Bancárias' — movimentações conforme extrato bancário"
+    },
+    "campos_principais": {
+      "total_saldo_anterior": "Saldo do mês anterior",
+      "total_debitos": "Despesas até agora",
+      "total_creditos": "Recebimentos + previsão de parcelas futuras",
+      "saldo_geral": "Créditos + Saldo Anterior – Débitos",
+      "posicao_do_caixa": "Valor total disponível = Saldo Anterior + Créditos até Hoje – Débitos até Hoje"
+    },
+    "regra_posicao_caixa": "A Posição do Caixa deve ser igual ao saldo em dinheiro + conta bancária somados.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como consultar a conta corrente da clínica no WebDental?",
+      "O que é Posição do Caixa no WebDental?",
+      "Como verificar o saldo da clínica?",
+      "Qual a diferença entre Conta Dinheiro e Conta Banco no WebDental?"
+    ]
+  },
+  {
+    "id": "chunk_028",
+    "titulo": "WebDental — Alteração de data na conta corrente (IN 042-2024)",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "alteracao_data_lancamento",
+    "acoes_zeev": [],
+    "normativa": "IN 042-2024",
+    "quem_pode_alterar": ["Sócios", "Gerentes"],
+    "regras": [
+      "Não é permitido retroceder ao mês anterior",
+      "Máximo de duas alterações por lançamento",
+      "Não é possível avançar mais de 20 dias da data atual (mesmo com duas alterações)",
+      "Antecipações não têm restrição"
+    ],
+    "fluxo_aprovacao": "O processo gera um 'Código de Solicitação' que deve ser informado ao sócio para aprovação em Relatórios > Autorizações > Autorização de Ações Sócio > Gerar.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como alterar a data de um lançamento no WebDental?",
+      "Posso mudar a data de um recebimento no WebDental?",
+      "Quem pode alterar datas na conta corrente da clínica?",
+      "Qual o limite de dias para alterar data no WebDental?"
+    ]
+  },
+  {
+    "id": "chunk_029",
+    "titulo": "WebDental — Extrato de agenda (mapa de produção da dentista)",
+    "sistema": ["webdental"],
+    "categoria": "agenda_odontologica",
+    "subcategoria": "relatorio_agenda",
+    "acoes_zeev": [],
+    "caminho_sistema": "Agenda > Agenda do Dia",
+    "filtros": ["Prestador", "Unidade", "Data"],
+    "como_exportar": "Clicar no ícone de impressão para imprimir ou salvar em PDF.",
+    "conteudo_relatorio": "Lista todos os atendimentos do dia com status de comparecimento, procedimento realizado e valores.",
+    "restricoes": [],
+    "casos_validados": [
+      {
+        "protocolo": "241992",
+        "clinica": "Umuarama",
+        "descricao": "Clínica precisava do mapa de agenda da Dra. Alessandra Castilho para enviar extrato de Conta Corrente Prestador",
+        "solucao": "SAF orientou via prints como acessar a Agenda do Dia e imprimir o relatório"
+      }
+    ],
+    "faq": [
+      "Como gerar o mapa de agenda do dentista no WebDental?",
+      "Como exportar a agenda do profissional?",
+      "Como imprimir a agenda de atendimentos da dentista?",
+      "Como pegar o extrato da conta corrente prestador?"
+    ]
+  },
+  {
+    "id": "chunk_030",
+    "titulo": "WebDental — Combo Orto + Clareamento (estrutura e regras)",
+    "sistema": ["webdental"],
+    "categoria": "produtos_odontologicos",
+    "subcategoria": "combo_orto_clareamento",
+    "acoes_zeev": [],
+    "valores": {
+      "manutencao_ortod": "R$ 70,00/mês",
+      "parcela_clareamento": "R$ 23,18/mês",
+      "total_mensal_combo": "R$ 93,18/mês por 20 meses",
+      "total_clareamento": "R$ 463,60",
+      "valor_apos_20_parcelas": "Volta a R$ 70,00"
+    },
+    "regras": [
+      "Exclusivo para aparelho fixo metálico",
+      "O clareamento incluso é o Caseiro com Moldeira",
+      "Os valores de clareamento não podem ser usados em outros tratamentos"
+    ],
+    "problema_bonus_nao_aparece": "Se o valor 'Clareamento Caseiro com uso de Moldeira (Boca Toda) – COMBO' não aparece no campo bônus ao aprovar, abrir chamado no Octadesk solicitando ajuste de R$ 380,00.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como funciona o Combo Orto + Clareamento?",
+      "O valor do combo não aparece no campo bônus, o que fazer?",
+      "Qual o valor mensal do combo de ortodontia com clareamento?",
+      "Posso usar o valor do clareamento do combo em outro tratamento?"
+    ]
+  },
+  {
+    "id": "chunk_031",
+    "titulo": "WebDental — Finalização de tratamento ortodôntico",
+    "sistema": ["webdental"],
+    "categoria": "ortodontia",
+    "subcategoria": "finalizacao_tratamento",
+    "acoes_zeev": [],
+    "formas_encerramento": {
+      "por_contencao_e_remocao": "A clínica lança as contenções e a remoção do aparelho no Odontograma",
+      "por_termo_de_desistencia": "Paciente assina o termo disponível no WebDental, e a clínica envia via Octadesk com cópia do documento de identidade para o suporte finalizar",
+      "por_ausencia_prolongada": "Se o paciente ficar 1 ano sem comparecer à agenda de ortodontia, o sistema finaliza automaticamente"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como finalizar um tratamento ortodôntico no WebDental?",
+      "O paciente desistiu do tratamento, como encerrar no sistema?",
+      "O que fazer quando o paciente sumiu do ortodontista?",
+      "Como gerar o Termo de Desistência de tratamento?"
+    ]
+  },
+  {
+    "id": "chunk_032",
+    "titulo": "WebDental — Odontograma: cores e significados",
+    "sistema": ["webdental"],
+    "categoria": "prontuario_odontologico",
+    "subcategoria": "odontograma",
+    "acoes_zeev": [],
+    "caminho_acesso": "Tela Inicial > Pacientes > Buscar Paciente Cadastrado > Abrir Odontograma",
+    "legenda_cores": {
+      "verde": "Tratamentos apenas orçados, não iniciados",
+      "vermelho": "Tratamentos aprovados pelo paciente, mas não finalizados",
+      "azul": "Tratamentos finalizados pelo profissional"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "O que significa a cor verde no odontograma?",
+      "O que significa a cor vermelha no odontograma?",
+      "O que significa a cor azul no odontograma?",
+      "Como acessar o odontograma do paciente?",
+      "Como ver os tratamentos do paciente no WebDental?"
+    ]
+  },
+  {
+    "id": "chunk_033",
+    "titulo": "WebDental — Ficha pessoal do paciente (consulta e alteração)",
+    "sistema": ["webdental"],
+    "categoria": "cadastro_paciente",
+    "subcategoria": "ficha_pessoal",
+    "acoes_zeev": [],
+    "caminho_sistema": "Tela Inicial > Pacientes > Buscar Paciente Cadastrado > selecionar paciente > Abrir Ficha Pessoal > selecionar dado > Alterar",
+    "problemas_conhecidos": [
+      "O sistema pode apresentar falhas ao salvar dados de pacientes com nomes com acentos ou caracteres especiais — evitar esses elementos no cadastro",
+      "Se ocorrer erro ao salvar, verificar se o CEP está sem hífen (ex: 14000000)"
+    ],
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como alterar dados de um paciente no WebDental?",
+      "Como consultar a ficha de um paciente?",
+      "Deu erro ao salvar dados do paciente, o que fazer?",
+      "Como atualizar o endereço de um paciente no WebDental?"
+    ]
+  },
+  {
+    "id": "chunk_034",
+    "titulo": "WebDental — Padrão de comissões por especialidade odontológica",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "tabela_comissoes",
+    "acoes_zeev": [],
+    "comissoes": {
+      "clinica_geral_ortodontia_odontopediatria_periodontia_endodontia_protese_estetica": {
+        "com_material_clinica": "25%",
+        "com_material_proprio": "até 32%"
+      },
+      "implantodontia": {
+        "percentual": "Entre 40% e 60%, conforme negociação",
+        "observacao": "Dentista responsável por todo o material incluindo a prótese"
+      },
+      "pagamento_parcelado": ["Estética", "Implantodontia"]
+    },
+    "calculo_exemplo": {
+      "valor_procedimento": "R$ 19,50",
+      "imposto_total": "10,50% (8% imposto + 2,50% taxa de cartão)",
+      "desconto": "R$ 2,05",
+      "valor_liquido_clinica": "R$ 17,46",
+      "comissao_25_porcento": "R$ 4,36"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Qual a comissão padrão do dentista clínico geral?",
+      "Qual a comissão do implantodontista?",
+      "Como calcular a comissão do dentista após impostos?",
+      "Qual o percentual de comissão por especialidade odontológica?"
+    ]
+  },
+  {
+    "id": "chunk_035",
+    "titulo": "WebDental — Impostos e pejotização",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "impostos_pejotizacao",
+    "acoes_zeev": ["A075"],
+    "acao_zeev_detalhe": "A075 — opção 'Alteração de taxas de impostos cadastradas' (após pejotização dos profissionais)",
+    "como_verificar_imposto": "WebDental > Configurações > Unidade de Atendimento > localizar unidade > Dados Financeiros > campo 'Imposto total'",
+    "conteudo": "O imposto total está vinculado ao regime tributário da unidade no momento de abertura. É descontado de todas as vendas feitas via TEF (maquininha: Pix, débito e crédito).",
+    "regras": [
+      "Após pejotização, a clínica pode solicitar a remoção do imposto via Zeev A075",
+      "O imposto só será removido das novas vendas após a exclusão; vendas anteriores permanecem com desconto",
+      "O sistema identifica qualquer desconto como 'imposto', mesmo que parte seja taxa de cartão"
+    ],
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como remover o imposto cadastrado no WebDental?",
+      "O que é o imposto total no WebDental?",
+      "Como funciona o desconto de imposto nas vendas?",
+      "Onde vejo o imposto cadastrado da minha unidade?"
+    ]
+  },
+  {
+    "id": "chunk_036",
+    "titulo": "WebDental — Problema: integração com maquininha MaisTodos (TEF)",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "integracao_tef",
+    "acoes_zeev": [],
+    "conteudo": "Quando vendas realizadas pela maquininha (TEF) não aparecem no sistema WebDental, o problema é de integração entre a máquina e o sistema.",
+    "como_verificar_tef": "Verificar se a TEF está habilitada na clínica em Configurações > Painel de Controle (no Amei) ou Configurações (no WebDental).",
+    "solucao_valores_no_banco_nao_no_sistema": "Se os valores apareceram no banco mas não no sistema, abrir chamado no Octadesk anexando o comprovante de pagamento e informando os dados do paciente para lançamento manual.",
+    "restricoes": [],
+    "casos_validados": [
+      {
+        "protocolo": "253935",
+        "clinica": "Maringá Mandacaru",
+        "descricao": "Clínica relatou que vendas das maquininhas não estavam espelhando no sistema WebDental",
+        "solucao": "SAF orientou abertura de chamado no Octadesk com comprovante e dados do paciente"
+      }
+    ],
+    "faq": [
+      "O sistema não está espelhando as vendas da maquininha",
+      "Passaram o cartão mas não apareceu no caixa do WebDental",
+      "TEF não está integrando com o WebDental",
+      "Como lançar pagamento que não apareceu no sistema?",
+      "A venda foi feita na máquina mas não está no sistema"
+    ]
+  },
+  {
+    "id": "chunk_037",
+    "titulo": "Zeev — Plataforma e principais fluxos",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "plataforma_zeev",
+    "acoes_zeev": ["A006", "A027", "A037", "A041", "A059", "A068", "A069", "A071", "A072", "A073", "A075", "LAB-01", "INT-02", "PROJ-02", "MLT-01", "PERF-01"],
+    "url_acesso": "https://amorsaude.zeev.it/login",
+    "como_acompanhar": "Acompanhar Solicitações > filtrar 'Todas as solicitações que tenho acesso'",
+    "chamado_com_pendencia": "Se o ticket estiver com pendência da clínica, acessar por 'Executar Tarefas' — não apenas visualizar.",
+    "mapeamento_fluxos_backoffice": {
+      "A006": "Cadastro profissionais Amei",
+      "A073": "Cadastro profissionais WebDental",
+      "A027": "Cadastro funcionários Amei",
+      "A072": "Cadastro funcionários WebDental",
+      "A037": "Inativação Amei",
+      "A068": "Inativação WebDental",
+      "A041": "Parcerias locais",
+      "A059": "Contas financeiras",
+      "A069": "Fornecedores locais",
+      "A071": "Manutenção de custos",
+      "A075": "Solicitações operacionais"
+    },
+    "outros_fluxos": {
+      "LAB-01": "AmorLab",
+      "INT-02": "Inteligência de Negócios",
+      "PROJ-02": "Projetos — produtos homologados",
+      "MLT-01": "cVortex",
+      "PERF-01": "Consultoria"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como acessar o Zeev?",
+      "Onde acompanho o status de um chamado no Zeev?",
+      "O chamado está com pendência para a clínica, como responder?",
+      "Como abrir chamado para o BackOffice?",
+      "Quais são os principais fluxos do Zeev?"
+    ]
+  },
+  {
+    "id": "chunk_038",
+    "titulo": "Zeev — Consulta e localização de chamados pendentes",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "localizacao_chamados",
+    "acoes_zeev": [],
+    "como_localizar": "Acessar 'Executar Tarefas' na tela principal e usar o campo de pesquisa de solicitação ou filtrar por tipo de solicitação.",
+    "dica_pesquisa": "Pesquisar apenas pelo número do chamado sem informar tipo de solicitação pode não encontrar o resultado — pode ser necessário filtrar pelo tipo (ex: PA-06 para Cadastros Obrigatórios de Odontologia).",
+    "chamado_nao_aparece": "Se o chamado foi rejeitado ou finalizado, ele não aparece em 'Executar Tarefas' — buscar em 'Acompanhar Solicitações' com filtro 'Todas as solicitações que tenho acesso'.",
+    "restricoes": [],
+    "casos_validados": [
+      {
+        "protocolo": "253943",
+        "clinica": "São Bernardo do Campo",
+        "descricao": "Clínica não encontrava o chamado 225342 em Executar Tarefas. SAF orientou a pesquisar sem o número, filtrar por tipo PA-06. Após investigação, verificou-se que o laboratório já estava cadastrado mas com valores divergentes.",
+        "solucao": "BackOffice reabriu o chamado 261132 para ajuste"
+      }
+    ],
+    "faq": [
+      "Não encontro meu chamado no Zeev",
+      "Como localizar um chamado pelo número no Zeev?",
+      "O chamado sumiu do Executar Tarefas no Zeev",
+      "Como filtrar chamados no Zeev?",
+      "O chamado foi rejeitado, como saber o motivo?"
+    ]
+  },
+  {
+    "id": "chunk_039",
+    "titulo": "Octadesk — O que é e quando usar",
+    "sistema": ["octadesk", "webdental"],
+    "categoria": "chamados",
+    "subcategoria": "plataforma_octadesk",
+    "acoes_zeev": [],
+    "url_acesso_clinica": "https://webdentalsolucoes.octadesk.com/login",
+    "uso": "Sistema exclusivo de chamados de suporte técnico para o WebDental",
+    "quando_usar": [
+      "Cancelamento de aprovação",
+      "Cancelamento de tratamento",
+      "Cancelamento de finalização de dentista",
+      "Erro em vinculação no plano de contas",
+      "Cancelamento de transporte de caixa",
+      "Relatório de bônus",
+      "Devolução de valores ao paciente",
+      "Transferência de bônus entre pacientes",
+      "Cancelamento de despesas em caixa",
+      "Finalização de manutenção ortodôntica por desistência",
+      "Incluir valor de pagamento por link"
+    ],
+    "acesso_administrativo_saf": {
+      "url": "https://app.octadesk.com/login",
+      "usuario": "saf.helpdesk@amorsaude.com",
+      "senha": "acessoSAF@01",
+      "aviso": "Somente equipe SAF — não compartilhar"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "O que é o Octadesk?",
+      "Quando abrir chamado no Octadesk?",
+      "Como acessar o Octadesk?",
+      "Qual a diferença entre Octadesk e Zeev?",
+      "Quais solicitações vão para o Octadesk?"
+    ]
+  },
+  {
+    "id": "chunk_040",
+    "titulo": "Yungas — Plataforma de comunicação e Instruções Normativas",
+    "sistema": ["yungas"],
+    "categoria": "comunicacao",
+    "subcategoria": "plataforma_yungas",
+    "acoes_zeev": [],
+    "url_acesso": "https://encr.pw/PFOvf",
+    "uso": "Canal centralizado de comunicação entre a Franqueadora e as franquias. Publicação de Instruções Normativas (INs), materiais padronizados e comunicação com Marketing e Financeiro.",
+    "como_abrir_demanda": "Caixa de Entrada > Nova Mensagem > Demanda > selecionar Departamento e Subdepartamento",
+    "duvidas_boletos_royalties": "Yungas > Departamento: FINANCEIRO - AmorSaúde > Subdepartamento: Dúvidas Medicina Financeiro",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como acessar o Yungas?",
+      "Onde consulto as Instruções Normativas?",
+      "Como abrir uma demanda no Yungas?",
+      "Onde tiro dúvidas sobre boleto de royalties?",
+      "Como contatar o financeiro pela Franqueadora?"
+    ]
+  },
+  {
+    "id": "chunk_041",
+    "titulo": "Jira — Suporte técnico para Amei e outros sistemas",
+    "sistema": ["amei", "feegow", "portal_paciente", "app_cartao_de_todos"],
+    "categoria": "suporte_tecnico",
+    "subcategoria": "plataforma_jira",
+    "acoes_zeev": [],
+    "url_acesso": "https://amorsaudesuporte.atlassian.net/servicedesk/customer/user/login",
+    "uso": "Canal de comunicação com a área de Suporte Tech da Franqueadora para erros ou instabilidades nos sistemas: Amei, Feegow, Portal do Paciente e Aplicativo Cartão de Todos.",
+    "como_abrir_chamado": "Acessar a página inicial > selecionar o sistema e o assunto > preencher campos obrigatórios > Enviar.",
+    "como_consultar_chamados": "Ícone de Perfil > Solicitações",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como reportar erro no sistema Amei?",
+      "Onde abro chamado para bug no Amei?",
+      "O Amei está com instabilidade, como acionar suporte técnico?",
+      "Como acessar o Jira para abertura de chamado?",
+      "Qual o canal para bug no Portal do Paciente?"
+    ]
+  },
+  {
+    "id": "chunk_042",
+    "titulo": "Amei — Cadastro de profissional médico (fluxo completo)",
+    "sistema": ["amei"],
+    "categoria": "cadastro",
+    "subcategoria": "cadastro_profissional_medico",
+    "acoes_zeev": ["A006"],
+    "etapas_sequenciais": [
+      {
+        "etapa": 1,
+        "nome": "Procedimentos de Agenda",
+        "descricao": "Inserir na aba 'Procedimentos de Agenda' todos os exames e procedimentos que o profissional realizará"
+      },
+      {
+        "etapa": 2,
+        "nome": "Abertura de Grade",
+        "descricao": "Em 'Horários de Atendimento', clicar em 'Incluir' para definir dias e horários"
+      },
+      {
+        "etapa": 3,
+        "nome": "Restrição de Atendimento",
+        "descricao": "Verificar se há restrições por idade ou sexo"
+      },
+      {
+        "etapa": 4,
+        "nome": "Fornecedor",
+        "descricao": "Vincular o profissional como fornecedor em Cadastro > Fornecedores e cadastrar os valores de repasse por procedimento em 'Procedimentos de Fornecedores'"
+      }
+    ],
+    "aviso_fornecedor": "Sem os valores de fornecedor cadastrados, o sistema não permite vincular o procedimento ao profissional durante a venda.",
+    "novo_cadastro_zeev": {
+      "A006": "Medicina (Amei)",
+      "A073": "Odontologia (WebDental)"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como cadastrar um médico no Amei?",
+      "Quais etapas para habilitar um profissional a atender?",
+      "O profissional está cadastrado mas não aparece para agendar, por quê?",
+      "Como vincular procedimentos ao médico no Amei?",
+      "Onde cadastro o valor de repasse do médico?"
+    ]
+  },
+  {
+    "id": "chunk_043",
+    "titulo": "Amei — Bloqueio de agenda médica",
+    "sistema": ["amei"],
+    "categoria": "agenda_medica",
+    "subcategoria": "bloqueio_agenda",
+    "acoes_zeev": [],
+    "caminho_sistema": "Cadastro > Lista de Profissionais > Editar Profissional (ícone lápis) > Horários e Atendimentos > Bloqueio de Agenda",
+    "campos_bloqueio": ["Data inicial", "Data final", "Dias da semana", "Horário inicial", "Horário final", "Área de atuação", "Descrição (motivo)"],
+    "consequencias": [
+      "Pacientes agendados em horários bloqueados são automaticamente transferidos para a lista de espera",
+      "Essa ação é irreversível",
+      "O sistema não permite conflitos com agendas em outras unidades"
+    ],
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como bloquear agenda do médico no Amei?",
+      "Como impedir novos agendamentos em um horário?",
+      "O médico tirou férias, como bloquear a agenda?",
+      "O que acontece com os pacientes agendados quando bloqueio a agenda?"
+    ]
+  },
+  {
+    "id": "chunk_044",
+    "titulo": "Amei — Módulo Financeiro: caixas e cadeado",
+    "sistema": ["amei"],
+    "categoria": "financeiro",
+    "subcategoria": "caixas_cadeado",
+    "acoes_zeev": [],
+    "caixas": {
+      "como_visualizar": "Financeiro > Caixas > clicar em 'Detalhar' para ver as transações",
+      "observacao": "Todo colaborador que realiza recebimentos precisa de um caixa vinculado ao seu guichê"
+    },
+    "cadeado": {
+      "finalidade": "O cadeado fechado impede movimentações financeiras posteriores no período",
+      "como_fechar": "Financeiro > Cadeados",
+      "reabertura": "Para qualquer correção após fechamento, é necessária autorização do sócio via e-mail ao SAF para reabertura"
+    },
+    "como_reabrir": "Clicar no ícone de cadeado > selecionar o módulo a ser desbloqueado > Salvar. Orientar a unidade a realizar as correções e fechar o cadeado até o fim do dia.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como abrir o caixa do colaborador no Amei?",
+      "O que é o cadeado no sistema Amei?",
+      "Como fechar o cadeado do Amei?",
+      "Como reabrir o cadeado para fazer uma correção?",
+      "Por que preciso fechar o cadeado?"
+    ]
+  },
+  {
+    "id": "chunk_045",
+    "titulo": "Amei — Royalties e processo de split",
+    "sistema": ["amei"],
+    "categoria": "financeiro",
+    "subcategoria": "royalties_split",
+    "acoes_zeev": [],
+    "calculo_royalties": "4% do faturamento bruto mensal, descontados os splits já realizados.",
+    "tipos_split": {
+      "automatico": "Ocorre no momento da venda, se houver saldo disponível na conta MaisTodos",
+      "por_captura": "MaisTodos captura 4% do total do período, mas somente se os cadeados estiverem fechados"
+    },
+    "duvidas_royalties": "Yungas > Departamento: Financeiro > Subdepartamento: Dúvidas Medicina Financeiro",
+    "observacao": "O imposto no Amei é lançado pela própria unidade em Contas a Pagar.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como são calculados os royalties de medicina?",
+      "O que é split no contexto de royalties?",
+      "Por que o cadeado precisa estar fechado para o split ocorrer?",
+      "Onde tiro dúvidas sobre cobrança de royalties?"
+    ]
+  },
+  {
+    "id": "chunk_046",
+    "titulo": "Amei — Validação de adimplência do Cartão de Todos",
+    "sistema": ["amei"],
+    "categoria": "cartao_de_todos",
+    "subcategoria": "adimplencia_paciente",
+    "acoes_zeev": [],
+    "url_consulta_manual": "https://parceiro.cartaodetodos.com.br/",
+    "conteudo": "Para um paciente ter desconto nas clínicas, ele precisa estar adimplente com o Cartão de Todos. O Amei verifica isso automaticamente. Pacientes inadimplentes não têm direito ao desconto. O sistema exibirá o status de inadimplência na tela do paciente.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como verificar se o paciente do Cartão de Todos está adimplente?",
+      "O paciente disse que tem Cartão de Todos mas não está recebendo desconto",
+      "Como consultar a situação do beneficiário do Cartão de Todos?",
+      "O desconto do Cartão de Todos não está sendo aplicado"
+    ]
+  },
+  {
+    "id": "chunk_047",
+    "titulo": "Amei — Assinatura digital e liberação temporária",
+    "sistema": ["amei"],
+    "categoria": "prontuario",
+    "subcategoria": "assinatura_digital",
+    "acoes_zeev": [],
+    "como_assinar": {
+      "individual": "Ao finalizar o atendimento",
+      "em_lote": "Pela tela 'Assinatura de Atendimentos'"
+    },
+    "como_liberar_temporariamente": "Cadastro > Lista de Profissionais > localizar profissional > aba 'Assinatura' > habilitar a flag e selecionar o motivo.",
+    "restricao_flag": "A flag NÃO desativa automaticamente — deve ser desativada manualmente após o uso.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como liberar assinatura digital temporária para um médico?",
+      "O médico não tem o certificado digital instalado, o que fazer?",
+      "Como desativar a obrigatoriedade de assinatura digital?",
+      "Como assinar prontuários em lote no Amei?"
+    ]
+  },
+  {
+    "id": "chunk_048",
+    "titulo": "Amei — Resultados de exames laboratoriais no sistema",
+    "sistema": ["amei", "portal_paciente"],
+    "categoria": "laboratorio",
+    "subcategoria": "resultados_exames",
+    "acoes_zeev": [],
+    "disponivel_desde": "04/04/2025",
+    "laboratorios_integrados": ["DB Diagnósticos do Brasil", "Hermes Pardini"],
+    "url_portal_paciente": "https://paciente.amorsaude.com.br/amorsaude",
+    "historico_financeiro_feegow": "Para histórico financeiro de pacientes Feegow não encontrado no BI, orientar envio de e-mail para a equipe de dados com: declaração de consentimento assinada pela paciente, cópia de documento de identidade, ou documento processual (em casos judiciais).",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como ver o resultado de exame laboratorial no Amei?",
+      "O paciente pediu o resultado do exame, onde encontro?",
+      "Como o paciente acessa o resultado de exame?",
+      "Como solicitar histórico financeiro de paciente do Feegow?"
+    ]
+  },
+  {
+    "id": "chunk_049",
+    "titulo": "Cadeados financeiros odontologia — Automação e impacto no indicador",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "cadeados_odontologia",
+    "acoes_zeev": [],
+    "automacao": {
+      "vigente_desde": "outubro/2025",
+      "logica": "Cadeados fechados automaticamente em lote, considerando 5 dias úteis anteriores à data atual (ex: em 20/10, fecha cadeados até 13/10)"
+    },
+    "legenda_cores": {
+      "azul": "Fechado automaticamente — NÃO contabilizado para indicador de performance (impacta comissão e premiação)",
+      "verde": "Fechado manualmente — conta para o indicador"
+    },
+    "como_reabrir": "Solicitação ao SAF com autorização do sócio pelo WhatsApp (16) 2018-2330, de segunda a sexta das 08h30 às 17h00.",
+    "prazo_reabertura_mes_anterior": "Aceita somente até o 5º dia útil do mês vigente.",
+    "hierarquia_fechamento_bi": {
+      "1_cadeado": "Coordenador/Financeiro",
+      "2_cadeado": "Gerente (login cadeadoXXX)",
+      "3_cadeado": "Sócio"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "O cadeado foi fechado automaticamente, isso impacta o indicador?",
+      "Como reabrir um cadeado financeiro na odontologia?",
+      "Qual o prazo para reabertura de cadeado do mês anterior?",
+      "Por que meu cadeado está azul e não verde?",
+      "Quem fecha cada cadeado no BI da odontologia?"
+    ]
+  },
+  {
+    "id": "chunk_050",
+    "titulo": "Power BI — Acesso e dashboards disponíveis",
+    "sistema": ["power_bi"],
+    "categoria": "analytics",
+    "subcategoria": "power_bi_acesso",
+    "acoes_zeev": ["INT-02"],
+    "url_acesso_principal": "https://app.powerbi.com/groups/51cc537c-5473-407a-bba405bb672d3e9e/list",
+    "credenciais": "E-mail corporativo e senha",
+    "dashboards": {
+      "1": "Power BI Medicina Amei",
+      "2": "Power BI Medicina Feegow",
+      "3": "Power BI Odontologia",
+      "4": "Antigo BI Odontologia (https://novobi.webdentalsolucoes.io/pages/login — login e senha iguais ao WebDental)"
+    },
+    "inconsistencias_bi": "Reportar via Zeev INT-02",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como acessar o Power BI?",
+      "Onde fico o BI de odontologia?",
+      "Como acessar o dashboard de medicina?",
+      "Como reportar erro nos dados do BI?",
+      "O dado do BI está incorreto, onde reclamo?"
+    ]
+  },
+  {
+    "id": "chunk_051",
+    "titulo": "cVortex — Plataforma de atendimento SAF (WhatsApp)",
+    "sistema": ["cvortex"],
+    "categoria": "atendimento",
+    "subcategoria": "plataforma_cvortex",
+    "acoes_zeev": ["MLT-01"],
+    "contatos": {
+      "central_de_vendas": "(11) 5330-0146",
+      "suporte_cvortex": "(11) 5330-0323",
+      "financeiro_cvortex": "faturamentoclientes@cvortex.io"
+    },
+    "como_atualizar_bot": "Abrir chamado no Zeev MLT-01 — a Franqueadora analisa em até 5 dias úteis.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Qual o número da central de vendas cVortex?",
+      "Como solicitar alteração no bot do WhatsApp?",
+      "Onde fica o suporte do cVortex?",
+      "Como falar com o financeiro do cVortex?"
+    ]
+  },
+  {
+    "id": "chunk_052",
+    "titulo": "Plataforma de treinamentos — Acesso e novo cadastro automático",
+    "sistema": ["plataforma_treinamentos"],
+    "categoria": "treinamento",
+    "subcategoria": "acesso_plataforma",
+    "acoes_zeev": ["A027", "A040"],
+    "url_acesso": "https://amorsaudetreinamentos.com/login/index.php",
+    "automacao": {
+      "vigente_desde": "14/04/2026",
+      "como_funciona": "Cadastro é automático quando o funcionário é cadastrado no Zeev A027 (fluxo Amei). O colaborador recebe e-mail com link para criar senha.",
+      "disponivel_para": "Apenas medicina por ora"
+    },
+    "login": "CPF + senha cadastrada",
+    "problemas": {
+      "dados_incorretos": "Corrigir via Zeev A040",
+      "email_nao_recebido": "Acionar via Zeev A040"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como criar acesso na plataforma de treinamentos?",
+      "O colaborador não recebeu o e-mail de acesso aos treinamentos",
+      "Como acessar os treinamentos da AmorSaúde?",
+      "Por que o novo funcionário não tem acesso à plataforma de treinamentos?"
+    ]
+  },
+  {
+    "id": "chunk_053",
+    "titulo": "Inativação de profissional médico e recuperação de agenda",
+    "sistema": ["amei", "power_bi"],
+    "categoria": "cadastro",
+    "subcategoria": "inativacao_profissional",
+    "acoes_zeev": [],
+    "recuperar_agendamentos_bi": "BI > Relatórios > Agendamentos > ajustar datas > Exportar Dados > filtrar por Profissional e Área de Atuação",
+    "contato_gestao_rede": "https://wa.me/16997791379",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "A agenda do médico sumiu após inativação, o que fazer?",
+      "Como recuperar os agendamentos de um profissional inativado?",
+      "Inativei um médico e perdi a agenda, como resolver?"
+    ]
+  },
+  {
+    "id": "chunk_054",
+    "titulo": "Priorização de chamados no SAF — Triagem correta",
+    "sistema": ["zeev", "octadesk", "yungas"],
+    "categoria": "processos_saf",
+    "subcategoria": "priorizacao_chamados",
+    "acoes_zeev": [],
+    "roteamento": {
+      "zeev": "Cadastros",
+      "octadesk": "Erros no WebDental",
+      "yungas": "Marketing, Financeiro, Projetos"
+    },
+    "especialidades_prioritarias": [
+      "Clínica Médica",
+      "Pediatria",
+      "Ginecologia",
+      "Oftalmologia",
+      "Cardiologia",
+      "Substituição de agenda de profissional"
+    ],
+    "fluxo_sla": {
+      "dentro_prazo": "Orientar a clínica a acompanhar",
+      "fora_prazo": "Encaminhar ao grupo da área responsável (conforme Anexo I — Lista de Contatos)"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como priorizar os chamados recebidos no SAF?",
+      "Qual o SLA do Zeev para cadastro de profissional?",
+      "O chamado está fora do prazo, o que fazer?",
+      "Quais especialidades têm prioridade no cadastro?"
+    ]
+  },
+  {
+    "id": "chunk_055",
+    "titulo": "BackOffice, AmorLab e Jurídico — Atribuições e contatos",
+    "sistema": ["backoffice", "amorlab", "juridico"],
+    "categoria": "setores_internos",
+    "subcategoria": "contatos_setores",
+    "acoes_zeev": ["LAB-01"],
+    "contatos": {
+      "backoffice": {
+        "email": "backoffice@amorsaude.com",
+        "teams": "Operações + BackOffice",
+        "atribuicoes": "Abertura e migração de unidades, publicação de Instruções Normativas, auditoria de documentação e cadastros gerais"
+      },
+      "amorlab": {
+        "zeev": "LAB-01",
+        "teams": "Suporte AmorLab",
+        "coordenadora": "Sarah Andrade",
+        "atribuicoes": "Gerencia toda a operação laboratorial da rede, integrando clínicas com laboratórios DB e Hermes Pardini",
+        "exame_sem_vinculo": "Abrir ticket via Zeev LAB-01"
+      },
+      "juridico": {
+        "email": "juridico@amorsaude.com",
+        "uso": "Dúvidas sobre contratos e documentos"
+      }
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como contatar o BackOffice?",
+      "O que o BackOffice faz?",
+      "Como acionar o AmorLab?",
+      "Um exame não tem executante vinculado, o que fazer?",
+      "Como acionar o jurídico da AmorSaúde?"
+    ]
+  },
+  {
+    "id": "chunk_056",
+    "titulo": "Pejotização — O que é e como funciona",
+    "sistema": ["geral"],
+    "categoria": "juridico_tributario",
+    "subcategoria": "pejotizacao",
+    "acoes_zeev": ["A075"],
+    "conteudo": "A pejotização é o processo de regularização dos profissionais como pessoa jurídica, com divisão de receitas (Revenue Share) entre profissional e clínica.",
+    "empresa_parceira": {
+      "nome": "Sinaxys",
+      "servico": "Concierge para transição de pejotização",
+      "email": "contato@sinaxys.com",
+      "telefone": "(31) 3190-0211"
+    },
+    "duvidas": "Yungas > Caixa de Entrada > Nova Demanda > Novos Negócios Projetos",
+    "pos_pejotizacao": "Após pejotização, a clínica pode solicitar remoção do imposto via Zeev A075.",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "O que é pejotização?",
+      "Como pejotizar os médicos da minha clínica?",
+      "Qual empresa ajuda com a pejotização?",
+      "Posso remover o imposto do WebDental após pejotizar?"
+    ]
+  },
+  {
+    "id": "chunk_057",
+    "titulo": "Boletos de royalties — Acesso e dúvidas",
+    "sistema": ["geral"],
+    "categoria": "financeiro",
+    "subcategoria": "boletos_royalties",
+    "acoes_zeev": [],
+    "url_acesso_boletos": "https://celertech.bubbleapps.io/amorsaude (preencher com o CNPJ)",
+    "tipos_boleto": ["Royalties medicina", "Royalties odontologia", "Boleto de SMS da odontologia"],
+    "duvidas_boletos": "Yungas > Nova Mensagem > Demanda > Departamento: FINANCEIRO – AmorSaúde > Subdepartamento: Dúvidas Medicina Financeiro",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como acessar o boleto de royalties?",
+      "Não consigo encontrar o boleto de royalties, onde fica?",
+      "Tenho dúvida sobre o valor do boleto de royalties?",
+      "Como abrir uma dúvida sobre pagamento de royalties?"
+    ]
+  },
+  {
+    "id": "chunk_058",
+    "titulo": "Empréstimo MaisTodos — Crédito para pacientes",
+    "sistema": ["amei", "webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "credito_maistodos",
+    "acoes_zeev": [],
+    "conteudo": "O crédito MaisTODOS permite parcelamento via carnê de exames e procedimentos para pacientes, com recebimento pela clínica em até 2 dias úteis.",
+    "como_registrar": {
+      "amei": "Ao receber, selecionar Pix > Não TEF > Conta: Empréstimo MaisTODOS. Após confirmação bancária, transferir o saldo para a conta que efetivamente recebeu.",
+      "webdental": "O crédito é gerado automaticamente na conta corrente da clínica 2 dias após o lançamento."
+    },
+    "problema_link_nao_reconhecido": "Pagamento por link MaisTODOS não reconhecido pelo WebDental: abrir chamado no Octadesk com comprovante de pagamento para lançamento manual.",
+    "observacao": "Apenas clínicas piloto participam por enquanto (Amei).",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como registrar pagamento por empréstimo MaisTODOS no Amei?",
+      "Como registrar pagamento por link MaisTODOS no WebDental?",
+      "O crédito MaisTODOS não apareceu no sistema, o que fazer?",
+      "Como funciona o carnê MaisTODOS para pacientes?"
+    ]
+  },
+  {
+    "id": "chunk_059",
+    "titulo": "Plano odontológico DentalVidas e Projeto MARA IA",
+    "sistema": ["webdental"],
+    "categoria": "produtos_servicos",
+    "subcategoria": "dentalvidas_mara_ia",
+    "acoes_zeev": [],
+    "dentalvidas": {
+      "descricao": "Operadora de planos odontológicos da rede AmorSaúde, regulamentada pela ANS",
+      "planos_ativos": 6,
+      "contato_whatsapp": "https://wa.me/31993114906"
+    },
+    "mara_ia": {
+      "descricao": "BOT de atendimento de ponta a ponta para clientes e clínicas (18 unidades)",
+      "funcionalidades": ["Agendamentos", "Vendas", "Cancelamentos", "Cobrança de inadimplência", "Interpretação por áudio"],
+      "escalacao_humano": "Após 3 tentativas no BOT, atendimento é derivado para humano",
+      "taxa_bot": "70% do atendimento via BOT",
+      "suporte": {
+        "telefone": "(85) 9761-3687",
+        "responsavel": "Isabel",
+        "email": "suporte_mara@vinna.one"
+      }
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "O que é o Plano DentalVidas?",
+      "Como falar com o suporte do plano odontológico?",
+      "O que é a MARA IA?",
+      "Quais unidades estão no projeto MARA IA?",
+      "Como contatar o suporte da MARA IA?"
+    ]
+  },
+  {
+    "id": "chunk_060",
+    "titulo": "Orientações de resposta do assistente SAF — Regras de comportamento",
+    "sistema": ["geral"],
+    "categoria": "regras_assistente",
+    "subcategoria": "comportamento_respostas",
+    "acoes_zeev": [],
+    "regras": [
+      "Responder estritamente o que foi perguntado — sem adicionar processos ou obrigatoriedades que não fazem parte da execução solicitada",
+      "Nunca citar remanejamento de pacientes em fluxos de abertura ou configuração de horários, a menos que a pergunta seja especificamente sobre alteração, exclusão ou substituição de profissionais em grades já existentes",
+      "Nunca misturar sistemas — se a dúvida for sobre médicos/Amei, ignorar completamente menus de Cadeiras/WebDental",
+      "Nunca inventar códigos Zeev, e-mails ou processos que não constem nos manuais",
+      "Nunca justificar erros internos de sistema como 'atraso entre sistema e aplicativo' — a causa deve ser inconsistência de cadastro ou falha na precificação",
+      "Usar frases de conforto ('Fique tranquilo') apenas se o usuário expressar medo ou receio explicitamente"
+    ],
+    "estrutura_resposta": {
+      "abertura": "Direta — 'Para [ação/objetivo]...'",
+      "corpo": "Solução técnica com nome do sistema e caminho ou código Zeev",
+      "fechamento": "'Ajudo em algo mais?'"
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como o assistente SAF deve responder perguntas de agenda?",
+      "Qual o padrão de resposta correto do SAF?",
+      "O assistente pode dar passo a passo para alterar comissão diretamente?",
+      "Como o SAF deve lidar com perguntas ambíguas entre Medicina e Odontologia?"
+    ]
+  },
+  {
+    "id": "chunk_061",
+    "titulo": "Lista de contatos úteis do SAF (setores e responsáveis)",
+    "sistema": ["geral"],
+    "categoria": "institucional",
+    "subcategoria": "lista_contatos",
+    "acoes_zeev": [],
+    "contatos": {
+      "backoffice": { "email": "backoffice@amorsaude.com", "teams": "Operações + BackOffice" },
+      "marketing": [
+        { "nome": "Ana Laura", "whatsapp": "(16) 99769-2866" },
+        { "nome": "Jéssica", "whatsapp": "(16) 99720-7220" },
+        { "nome": "Mariane", "whatsapp": "(16) 99602-6376" }
+      ],
+      "octadesk_suporte_webdental": {
+        "email": "wanderlucio.neves@amorsaude.com",
+        "teams": "Suporte WebDental"
+      },
+      "amorlab": {
+        "teams": "Suporte AmorLab",
+        "coordenadora": "Sarah Andrade"
+      },
+      "plano_odontologico": {
+        "whatsapp": "(31) 99311-4906",
+        "supervisora": "Ariane Herrera"
+      },
+      "financeiro": [
+        "Lauriele Santos",
+        "Bruna Brizotti",
+        "Eduardo Moraes",
+        { "nome": "Felipe Oliveira", "cargo": "Gerente" }
+      ],
+      "suporte_maistodos": "(16) 98220-0199",
+      "suporte_amei": {
+        "coordenadora": "Tamara Saturno",
+        "andre_medina": "(16) 99643-1664"
+      },
+      "area_tecnica": {
+        "email": "gerencia.tecnica@amorsaude.com",
+        "carla_costa": "Odonto",
+        "luis_rocha": "Medicina",
+        "gerente": "Leonardo Botelho"
+      },
+      "telemedicina": {
+        "clinicas": "(16) 993431885",
+        "pacientes": "(16) 99621-0577"
+      },
+      "juridico": "juridico@amorsaude.com",
+      "arquitetura": {
+        "responsavel": "Bianca Leite",
+        "email": "bferreiraleitte@gmail.com",
+        "canal": "Yungas"
+      },
+      "gestao_rede": "https://wa.me/16997791379",
+      "cvortex": {
+        "central_vendas": "(11) 5330-0146",
+        "suporte": "(11) 5330-0323"
+      },
+      "incorpora_todos": {
+        "telefone": "+55 31 99584-3754",
+        "site": "https://incorporafranquias.com.br/"
+      },
+      "inteligencia_negocios": {
+        "responsavel": "Guilherme Correa",
+        "zeev": "INT-02"
+      }
+    },
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Qual o contato do suporte do Amei?",
+      "Como falar com o financeiro da AmorSaúde?",
+      "Qual o número do suporte MaisTODOS?",
+      "Como contatar a área técnica de odontologia?",
+      "Qual o e-mail do jurídico da AmorSaúde?"
+    ]
+  }
+]

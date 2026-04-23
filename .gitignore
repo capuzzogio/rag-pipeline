@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ambiente
+.venv/
+env/
+
+# FAISS (não subir arquivos pesados)
+faiss_index/
