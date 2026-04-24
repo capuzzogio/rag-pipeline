@@ -7,6 +7,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# Gera o índice FAISS no build
+RUN python rebuild_index.py
+
 EXPOSE 7860
 
 CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "7860"]
