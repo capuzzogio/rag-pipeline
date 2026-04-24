@@ -92,32 +92,13 @@ RAG_SAF/
 
 ---
 
-## 🚀 Como executar
+## 🚀 Como acessar
 
-### 1. Instalar dependências
+A API está disponível em:
 
-```bash id="wq3vni"
-pip install -r requirements.txt
-```
+👉 https://capuzzogio-rag-pipeline.hf.space/docs
 
----
-
-### 2. Gerar índice FAISS
-
-```bash id="mgsn56"
-python rebuild_index.py
-```
-
----
-
-### 3. Rodar API
-
-```bash id="v1p7nq"
-uvicorn api:app --reload
-```
-
-Acesse:
-👉 http://127.0.0.1:8000/docs
+O índice FAISS é gerado automaticamente no build do container.
 
 ---
 
