@@ -8,3 +8,5 @@ env/
 
 # FAISS (não subir arquivos pesados)
 faiss_index/
+
+.env

@@ -5,6 +5,11 @@ import faiss
 from sentence_transformers import SentenceTransformer
 import json
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+from groq import Groq
 
 # -------------------------
 # APP
@@ -78,11 +83,64 @@ def search(query, k=3):
 # -------------------------
 # ENDPOINT
 # -------------------------
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
 @app.post("/ask")
 def ask(q: Question):
     results = search(q.question)
 
+    # -----------------------------
+    # 📦 CONTEXTO RAG
+    # -----------------------------
+    context = "\n\n".join(
+    f"[{i+1}] FONTE: {r.get('titulo','')}\n{r.get('conteudo','').strip()}"
+    for i, r in enumerate(results[:3])
+    if r.get("conteudo")
+)
+
+    # -----------------------------
+    # 🧠 PROMPT LIMPO (IMPORTANTE)
+    # -----------------------------
+    prompt = f"""
+Você é um assistente de suporte interno baseado em documentos.
+
+REGRAS OBRIGATÓRIAS:
+- Use SOMENTE o contexto abaixo
+- Nunca invente informação
+- Sempre cite a fonte entre colchetes [1], [2], [3] quando usar um trecho
+- Cada informação importante deve ter uma fonte
+
+FORMATO DE RESPOSTA:
+- Resposta clara e operacional
+- Passo a passo quando necessário
+- No final: liste as fontes usadas
+
+Se não houver informação suficiente no contexto, diga:
+"Não encontrei essa informação no sistema."
+
+CONTEXTO:
+{context}
+
+PERGUNTA:
+{q.question}
+"""
+    # -----------------------------
+    # ⚡ GROQ
+    # -----------------------------
+    completion = client.chat.completions.create(
+        messages=[
+            {"role": "user", "content": prompt}
+        ],
+        model="llama-3.1-8b-instant"
+    )
+
+    answer = completion.choices[0].message.content
+
+    # -----------------------------
+    # 📤 RESPOSTA FINAL
+    # -----------------------------
     return {
         "question": q.question,
+        "answer": answer,
         "results": results
     }
