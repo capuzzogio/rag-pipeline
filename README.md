@@ -1,3 +1,11 @@
+---
+title: Rag Pipeline
+emoji: 🔍
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
 ## 🔄 Evolução do Projeto
 
 Refatorado de uma versão inicial com LangChain para uma arquitetura direta com FAISS + embeddings,
