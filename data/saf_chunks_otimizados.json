@@ -11,7 +11,7 @@
       "email": "saf@amorsaude.com",
       "horario": "segunda a sexta, 08h30 às 17h00"
     },
-    "conteudo": "O SAF (Serviço de Apoio à Franquia) é a estrutura central da AmorSaúde que conecta franquias a todos os setores internos da rede. Combina atendimento digital via BOT/IA com atendimento humanizado. Atua como ponte entre a franquia e áreas como BackOffice, Financeiro, AmorLab, Jurídico e Gestão de Rede.",
+    "conteudo": "O SAF (Serviço de Apoio à Franquia) é a estrutura central da AmorSaúde que conecta franquias a todos os setores internos da rede. Combina atendimento digital via BOT/IA com atendimento humanizado. Atua como ponte entre a franquia e áreas como BackOffice, Financeiro, AmorLab, Jurídico e Gestão de Rede. O contato pode ser feito pelo telefone (16) 2018-2330, pelo e-mail saf@amorsaude.com ou pelos sistemas Zeev, Octadesk e Yungas, de segunda a sexta das 08h30 às 17h00.",
     "instrucoes_fora_horario": "Fora do horário de atendimento, as demandas devem ser registradas nos sistemas (Zeev, Octadesk, Yungas) para retorno posterior.",
     "restricoes": [],
     "casos_validados": [],
@@ -53,6 +53,7 @@
     "categoria": "chamados",
     "subcategoria": "roteamento_chamados",
     "acoes_zeev": ["A006", "A073", "A027", "A072", "A037", "A068", "A071", "A075"],
+    "conteudo": "A escolha do sistema de chamado depende do tipo de solicitação. Use o Zeev para cadastros, inativações e manutenções operacionais (profissionais, funcionários, fornecedores, comissões). Use o Octadesk exclusivamente para erros técnicos e bugs no WebDental. Use o Jira para erros técnicos nos sistemas Amei, Feegow, Portal do Paciente e Aplicativo Cartão de Todos. No Zeev, cada tipo de solicitação tem um código específico: A006 para cadastro de profissionais no Amei, A073 para cadastro no WebDental, A027 para cadastro de funcionários no Amei, A072 para funcionários no WebDental, A037 para inativação no Amei, A068 para inativação no WebDental, A071 para alteração de comissões e repasses, e A075 para solicitações operacionais diversas como alteração de e-mail de profissional ou inclusão de nova negociação. Para reset ou novo acesso ao Octadesk, somente o SÓCIO da unidade pode enviar e-mail para wanderlucio.neves@amorsaude.com.",
     "mapeamento_chamados": {
       "A006": "Cadastro de novos profissionais de saúde (Amei)",
       "A073": "Cadastro de novos profissionais de saúde (WebDental)",
@@ -81,7 +82,9 @@
       "Qual o fluxo Zeev para alterar e-mail de profissional?",
       "Como reportar bug no WebDental?",
       "Como reportar bug no Amei?",
-      "Onde abrir chamado para erro no sistema?"
+      "Onde abrir chamado para erro no sistema?",
+      "Qual sistema usar para abertura de chamado?",
+      "Qual o fluxo correto para abertura de chamados?"
     ]
   },
   {
@@ -189,7 +192,7 @@
       "Vigência início",
       "Vigência fim"
     ],
-    "conteudo": "Para abrir a agenda (grade de horários) de um profissional médico no sistema Amei, acessar: Cadastro > Lista de Profissionais > selecionar o profissional > Horários de Atendimento > clicar em Incluir.",
+    "conteudo": "Para abrir a agenda (grade de horários) de um profissional médico no sistema Amei, acessar: Cadastro > Lista de Profissionais > selecionar o profissional > Horários de Atendimento > clicar em Incluir. Antes de abrir a grade, os procedimentos de agenda do profissional devem estar cadastrados na aba 'Procedimentos de Agenda'. Os campos obrigatórios são: dias da semana (flegados), hora inicial, hora final, unidade, local (consultório), vigência início e vigência fim.",
     "causa_procedimento_nao_aparece": "Se o procedimento não aparece ao tentar abrir a grade mesmo estando cadastrado, verificar se está precificado corretamente na Tabela de Preços Parcerias (modalidades Cartão de Todos e Particular). Ausência de precificação impede a exibição do procedimento no agendamento.",
     "restricoes": [],
     "casos_validados": [],
@@ -268,6 +271,7 @@
     "acoes_zeev": [],
     "solucao_primaria": "CTRL+SHIFT+R para limpar o cache e recarregar a página",
     "quando_usar": "Quando o sistema apresenta comportamento inesperado visual: procedimentos que apareceram e desapareceram, grades que não carregam, dados que não atualizam após alterações.",
+    "conteudo": "Quando o sistema Amei apresenta comportamento inesperado — como procedimentos que apareceram e desapareceram, grades que não carregam ou dados que não atualizam após alterações — a primeira ação é limpar o cache do navegador com CTRL+SHIFT+R. Se o problema persistir após a limpeza de cache, acionar o suporte técnico do Amei via chat (ícone no canto inferior direito do sistema) ou abrir chamado no Jira.",
     "escalacao": "Se o problema persistir após limpeza de cache, acionar suporte técnico do Amei via chat (ícone no canto inferior direito do sistema) ou abrir chamado no Jira.",
     "restricoes": [],
     "casos_validados": [
@@ -293,6 +297,7 @@
     "subcategoria": "conflito_grade_unidades",
     "acoes_zeev": [],
     "mensagem_erro": "Erro ao deletar grade — Não foi possível excluir a grade, pois existem pacientes agendados. Por favor, efetue o remanejamento das agendas e tente novamente.",
+    "conteudo": "Quando um profissional atende em duas unidades e há conflito de grade, a mensagem de erro exibida é: 'Não foi possível excluir a grade, pois existem pacientes agendados.' O fluxo de resolução é: (1) A unidade que tem a grade ativa deve primeiro bloquear os horários para impedir novos agendamentos; (2) Depois acionar o suporte técnico do Amei via chat para solicitar a exclusão da grade com pacientes. O SAF não tem acesso para excluir grades de outras unidades.",
     "fluxo_resolucao": [
       "1. A unidade que tem a grade ativa deve primeiro bloquear os horários para impedir novos agendamentos",
       "2. Depois acionar o suporte técnico do Amei via chat para solicitar a exclusão da grade com pacientes"
@@ -325,7 +330,7 @@
     "categoria": "prontuario",
     "subcategoria": "assinatura_digital",
     "acoes_zeev": [],
-    "conteudo": "Quando um médico relata que o sistema mostra prontuários aguardando assinatura mas, ao buscar os atendimentos, nada aparece na lista, o problema é de natureza técnica no sistema Amei.",
+    "conteudo": "Quando um médico relata que o sistema mostra prontuários aguardando assinatura mas, ao buscar os atendimentos, nada aparece na lista, o problema é de natureza técnica no sistema Amei. A solução é acionar o suporte técnico do Amei via chat (ícone no canto inferior direito do sistema) para que a equipe verifique a inconsistência de dados. O SAF não tem autonomia para resolver inconsistências de dados no banco do Amei.",
     "solucao": "Acionar o suporte técnico do Amei via chat (ícone no canto inferior direito do sistema) para que a equipe verifique a inconsistência de dados.",
     "restricoes": [
       "O SAF não tem autonomia para resolver inconsistências de dados no banco do Amei"
@@ -347,6 +352,7 @@
     "acoes_zeev": [],
     "codigo_erro": "ORA-01841",
     "descricao_erro": "Erro de integridade de data no banco de dados do Amei. Indica inconsistência no formato da data/ano no cadastro da grade.",
+    "conteudo": "O erro ORA-01841 no Amei indica uma inconsistência no formato da data ou ano no cadastro da grade. A solução é orientar a correção manual no menu Cadastro > Profissionais, verificando o formato das datas de vigência da grade. Se o erro persistir, acionar o suporte técnico via Jira. Nunca justificar como 'atraso na atualização entre o sistema e o aplicativo' — a justificativa de atraso só é válida para erros de sincronização, nunca para erros de código ORA-XXXX.",
     "solucao": "Orientar a correção manual no menu Cadastro > Profissionais, verificando o formato das datas de vigência da grade. Se o erro persistir, acionar o suporte técnico via Jira.",
     "restricoes": [
       "Nunca justificar como 'atraso na atualização entre o sistema e o aplicativo'",
@@ -368,7 +374,7 @@
     "subcategoria": "login_webdental",
     "acoes_zeev": ["A072", "A073"],
     "url_acesso": "https://sistema.webdentalsolucoes.io/",
-    "conteudo": "Login e senha são fornecidos pelo BackOffice via chamado no Zeev. Logins sem uso por mais de 45 dias são automaticamente inativados pelo sistema.",
+    "conteudo": "O acesso ao WebDental é feito pelo endereço https://sistema.webdentalsolucoes.io/. Login e senha são fornecidos pelo BackOffice via chamado no Zeev. Logins sem uso por mais de 45 dias são automaticamente inativados pelo sistema. Para verificar se o login está inativo, acessar Configurações > Prestadores > pesquisar o nome ou login — se inativado, aparecerá a mensagem 'Bloqueado'. Para reativar profissionais, usar Zeev A073; para funcionários, Zeev A072. Se a unidade não aparece na lista de seleção do login, assumir que o login foi inativado e direcionar para o Zeev A072.",
     "como_verificar_login_inativo": "Configurações > Prestadores > pesquisar o nome ou login. Se inativado, aparecerá a mensagem 'Bloqueado'.",
     "como_reativar": {
       "profissionais": "Zeev A073",
@@ -394,6 +400,7 @@
     "subcategoria": "abertura_cadeira",
     "acoes_zeev": [],
     "caminho_sistema": "Configurações > Agenda > Cadeiras",
+    "conteudo": "Para abrir a cadeira (agenda) de um dentista no WebDental, acessar: Configurações > Agenda > Cadeiras. Os campos necessários são: data de abertura, cadeira disponível, prestador, data fim (recomenda-se até 1 ano de antecedência para evitar abertura semanal repetitiva) e hora fim. Se o dentista atende das 8h às 18h, abrir em dois blocos: manhã (8h às 12h) e tarde (13h às 18h). Apenas perfis de Coordenação ou Gerente podem realizar esta ação.",
     "campos": [
       "Data de abertura",
       "Cadeira disponível",
@@ -421,6 +428,7 @@
     "subcategoria": "bloqueio_agenda",
     "acoes_zeev": [],
     "caminho_sistema": "Agenda > Agenda do Dia > Prestador > Data > Compromisso do Prestador",
+    "conteudo": "Para bloquear um horário na agenda do dentista no WebDental, acessar: Agenda > Agenda do Dia > selecionar Prestador > selecionar Data > clicar em Compromisso do Prestador > selecionar Período > selecionar Motivo > selecionar Horário > incluir o motivo do bloqueio > clicar em Salvar.",
     "passos": [
       "Selecionar Prestador",
       "Selecionar Data",
@@ -448,6 +456,7 @@
     "subcategoria": "comissao_prestador",
     "acoes_zeev": [],
     "caminho_sistema": "Conta Corrente Prestador > Painel de Produção",
+    "conteudo": "Para visualizar a comissão do dentista no WebDental, acessar: Conta Corrente Prestador > Painel de Produção. Os filtros disponíveis são: data início, data fim, unidade, prestador e tipo de tratamento. A legenda de cores indica: azul/branco = procedimento finalizado, ainda não pago ao dentista; verde = procedimento finalizado e já pago ao dentista; vermelho = procedimento finalizado, pago ao dentista, com repetição registrada.",
     "campos_filtro": ["Data início", "Data fim", "Unidade", "Prestador", "Tipo de tratamento"],
     "legenda_cores": {
       "azul_branco": "Procedimento finalizado, ainda não pago ao dentista",
@@ -470,6 +479,7 @@
     "categoria": "financeiro",
     "subcategoria": "problema_comissao",
     "acoes_zeev": [],
+    "conteudo": "Quando a comissão do dentista está zerada ou abaixo do esperado no WebDental, verificar dois cenários: (1) Se for paciente de plano odontológico, a comissão só é liberada após envio e validação da GTO — sem GTO aprovada, o sistema não libera a comissão independentemente do atendimento ter sido realizado. (2) Se for tratamento de Implantodontia com pagamento parcelado, a comissão é repassada parcelada conforme o cronograma de pagamento do paciente. Para verificar parcelas de implantodontia: Financeiro > NOVO - Conta Corrente Paciente (verificar data de cada parcela).",
     "checklist_verificacao": [
       "1. Tratamento de paciente de plano odontológico? → Comissão só é liberada após envio e validação da GTO",
       "2. Tratamento de Implantodontia com pagamento parcelado? → Comissão é repassada parcelada conforme cronograma de pagamento do paciente"
@@ -492,7 +502,7 @@
     "categoria": "financeiro",
     "subcategoria": "comissao_implantodontia",
     "acoes_zeev": [],
-    "conteudo": "Na Implantodontia, a comissão ao dentista não é paga de uma vez ao finalizar o tratamento. Ela segue o cronograma de pagamento do paciente: se o paciente paga à vista, o dentista recebe de uma vez; se parcelou, o dentista recebe mês a mês conforme as parcelas são recebidas.",
+    "conteudo": "Na Implantodontia, a comissão ao dentista não é paga de uma vez ao finalizar o tratamento. Ela segue o cronograma de pagamento do paciente: se o paciente paga à vista, o dentista recebe de uma vez; se parcelou, o dentista recebe mês a mês conforme as parcelas são recebidas. Para verificar: Financeiro > NOVO - Conta Corrente Paciente > localizar a data de recebimento de cada parcela > buscar na Conta Corrente Prestador por essa data.",
     "como_verificar": "Financeiro > NOVO - Conta Corrente Paciente > localizar a data de recebimento de cada parcela > buscar na Conta Corrente Prestador por essa data.",
     "restricoes": [
       "PRÁTICA PROIBIDA: Nunca lançar o valor pago pelo paciente como bônus e depois aprovar o tratamento para gerar comissão integral antecipada — isso fere as regras da Franqueadora e o sistema WebDental"
@@ -512,7 +522,7 @@
     "categoria": "financeiro",
     "subcategoria": "gto_plano_odontologico",
     "acoes_zeev": [],
-    "conteudo": "Para atendimentos de pacientes de plano odontológico (DentalVidas), a comissão do prestador só é liberada na Conta Corrente do Prestador após o envio e validação da GTO no WebDental. Sem a GTO enviada e aprovada, o sistema não libera a comissão independentemente do atendimento ter sido realizado.",
+    "conteudo": "Para atendimentos de pacientes de plano odontológico (DentalVidas), a comissão do prestador só é liberada na Conta Corrente do Prestador após o envio e validação da GTO no WebDental. Sem a GTO enviada e aprovada, o sistema não libera a comissão independentemente do atendimento ter sido realizado. Para consultar: Convênio > Tratamentos Dentalvidas (Envio/Lote/NF/Pagamentos). Para ortodontia: Convênio > Tratamentos Dentalvidas ORTO.",
     "caminhos_consulta": {
       "geral": "Convênio > Tratamentos Dentalvidas (Envio/Lote/NF/Pagamentos)",
       "ortodontia": "Convênio > Tratamentos Dentalvidas ORTO"
@@ -533,7 +543,7 @@
     "categoria": "financeiro",
     "subcategoria": "comissao_indicacao",
     "acoes_zeev": [],
-    "conteudo": "O WebDental permite que dentistas recebam comissão de 1% sobre o valor de tratamentos que indicaram para outras especialidades.",
+    "conteudo": "O WebDental permite que dentistas recebam comissão de 1% sobre o valor de tratamentos que indicaram para outras especialidades. Para isso, a indicação deve ser lançada corretamente pelo prestador no sistema e o dentista deve atingir ticket médio mínimo de R$ 20,00 por paciente único. Valores de indicações convertidas são creditados na Conta Corrente do Prestador após o fechamento do mês seguinte. Para acompanhar: WebDental > CAPTAÇÃO > Controle de Indicações - DENTISTA.",
     "condicoes": [
       "A indicação deve ser lançada corretamente pelo prestador no sistema",
       "O dentista deve atingir ticket médio mínimo de R$ 20,00 por paciente único"
@@ -556,6 +566,7 @@
     "categoria": "financeiro",
     "subcategoria": "repeticao_procedimento",
     "acoes_zeev": [],
+    "conteudo": "Quando um procedimento é refeito por outro dentista, o tratamento financeiro depende do período: se for do mês anterior, a clínica libera manualmente a repetição da comissão no sistema para o novo profissional receber; se for do mês vigente, a clínica abre chamado no Octadesk solicitando o cancelamento da finalização e, após o cancelamento, o dentista que refez realiza nova finalização. O dentista original terá um débito (vermelho) na Conta Corrente e o dentista que refez receberá o crédito.",
     "fluxo_por_periodo": {
       "mes_anterior": "A clínica libera manualmente a repetição da comissão no sistema para o novo profissional receber",
       "mes_vigente": "A clínica abre chamado no Octadesk solicitando o cancelamento da finalização; após cancelamento, o dentista que refez realiza nova finalização"
@@ -578,6 +589,7 @@
     "subcategoria": "gestao_proteticos",
     "acoes_zeev": [],
     "caminho_sistema": "Relatórios > Orçamentos/Tratamentos > Gastos Protéticos",
+    "conteudo": "Para acompanhar protéticos no WebDental, acessar: Relatórios > Orçamentos/Tratamentos > Gastos Protéticos. Existem 3 status: (1) Pendente Liberar — modelo devolvido pelo laboratório, pronto para uso; ação: selecionar paciente e laboratório e clicar em 'Liberar Protéticos'. (2) Protético Não Pago — modelo recebido, pagamento ao laboratório pendente; ação: selecionar paciente e forma de pagamento e clicar em 'Pagar', o que gera débito automático na conta da clínica. (3) Protético Pago — consulta de modelos já pagos. Para cancelar pagamento feito para paciente errado: filtrar por 'Protético Pago' > selecionar paciente errado > clicar em 'Cancelar Pagamento/Repetições'.",
     "status": {
       "1_pendente_liberar": {
         "descricao": "Modelo devolvido pelo laboratório, pronto para uso",
@@ -610,6 +622,7 @@
     "subcategoria": "tabela_intervencoes",
     "acoes_zeev": ["A071"],
     "caminho_sistema": "Configurações > Tabela de Intervenções (somente Coordenação e Gerência)",
+    "conteudo": "A Tabela de Intervenções no WebDental contém os valores de venda dos procedimentos odontológicos. Para acessar: Configurações > Tabela de Intervenções (somente Coordenação e Gerência). Use CTRL+F dentro da tabela para buscar uma intervenção específica. Tabelas com letra 'w' na frente estão inativadas. Existem 4 tipos de permissão: tipo 1 = valor bloqueado sem possibilidade de alteração; tipo 2 = permissão de 3x a 4x o valor do protético; tipo 3 = ajuste dentro de 25% do valor base; tipo 4 = alteração somente via Zeev A071. Após atualizar o valor do protético, sempre conferir e atualizar a tabela de intervenções — o valor deve ser de 3x a 4x o valor pago ao laboratório.",
     "dica_busca": "Usar CTRL+F dentro da tabela para buscar intervenção específica. Tabelas com letra 'w' na frente estão inativadas.",
     "regras_permissao": {
       "tipo_1": "Valor bloqueado: sem possibilidade de alteração",
@@ -634,6 +647,7 @@
     "categoria": "cadastro",
     "subcategoria": "laboratorio_parceiro",
     "acoes_zeev": ["A069", "A071", "A068"],
+    "conteudo": "Para cadastrar, atualizar ou desativar um laboratório parceiro no WebDental, os chamados Zeev corretos são: A069 para cadastrar novo laboratório, A071 para atualizar valores de laboratório já cadastrado e A068 para desativar um laboratório. Para consultar os laboratórios cadastrados: protéticos em Configurações > Tabela de Protéticos; radiologias em Configurações > Tabela de Radiologias.",
     "mapeamento_acoes": {
       "A069": "Cadastrar novo laboratório — Solicitação de cadastro de fornecedores locais de exames e procedimentos",
       "A071": "Atualizar valores de laboratório já cadastrado — Manutenção de custos de profissionais e fornecedores",
@@ -660,6 +674,7 @@
     "subcategoria": "fechamento_caixa",
     "acoes_zeev": [],
     "descricao": "O Consolidado do Dia é o principal relatório de fechamento diário de caixa das clínicas odontológicas.",
+    "conteudo": "O Consolidado do Dia é o principal relatório de fechamento diário de caixa das clínicas odontológicas no WebDental. A legenda de cores indica: azul = recebimentos em dinheiro/Pix do dia; verde = valores previstos para crédito em cartão e Pix via maquininha (exige conciliação bancária); vermelho = despesas lançadas; amarelo = tratamentos aprovados com cartão com data futura de crédito por parcela. Recomenda-se conferir os canhotos de cartão junto ao relatório e anotar o nome do paciente no comprovante.",
     "legenda_cores": {
       "azul": "Recebimentos em dinheiro/Pix do dia",
       "verde": "Valores previstos para crédito em cartão e Pix via maquininha (exige conciliação bancária)",
@@ -684,6 +699,7 @@
     "subcategoria": "conta_corrente_clinica",
     "acoes_zeev": [],
     "caminho_sistema": "Financeiro > Conta Corrente da Clínica",
+    "conteudo": "A Conta Corrente da Clínica no WebDental está em Financeiro > Conta Corrente da Clínica. Existem dois tipos: Conta Dinheiro (cabeçalho azul) com entradas e saídas apenas em dinheiro, e Conta Banco (cabeçalho verde, em 'Transações Bancárias') com movimentações conforme extrato bancário. Os campos principais são: Total Saldo Anterior (saldo do mês anterior), Total Débitos (despesas até agora), Total Créditos (recebimentos + previsão de parcelas futuras), Saldo Geral (Créditos + Saldo Anterior – Débitos) e Posição do Caixa (valor total disponível = Saldo Anterior + Créditos até Hoje – Débitos até Hoje). A Posição do Caixa deve ser igual ao saldo em dinheiro + conta bancária somados.",
     "tipos_conta": {
       "conta_dinheiro": "Cabeçalho azul — entradas e saídas apenas em dinheiro",
       "conta_banco": "Cabeçalho verde, em 'Transações Bancárias' — movimentações conforme extrato bancário"
@@ -713,6 +729,7 @@
     "subcategoria": "alteracao_data_lancamento",
     "acoes_zeev": [],
     "normativa": "IN 042-2024",
+    "conteudo": "Conforme a IN 042-2024, apenas Sócios e Gerentes podem alterar datas na conta corrente do WebDental. As regras são: não é permitido retroceder ao mês anterior; máximo de duas alterações por lançamento; não é possível avançar mais de 20 dias da data atual (mesmo com duas alterações); antecipações não têm restrição. O processo gera um 'Código de Solicitação' que deve ser informado ao sócio para aprovação em Relatórios > Autorizações > Autorização de Ações Sócio > Gerar.",
     "quem_pode_alterar": ["Sócios", "Gerentes"],
     "regras": [
       "Não é permitido retroceder ao mês anterior",
@@ -738,6 +755,7 @@
     "subcategoria": "relatorio_agenda",
     "acoes_zeev": [],
     "caminho_sistema": "Agenda > Agenda do Dia",
+    "conteudo": "Para gerar o mapa de agenda (extrato de produção) do dentista no WebDental, acessar: Agenda > Agenda do Dia. Os filtros disponíveis são Prestador, Unidade e Data. Para exportar, clicar no ícone de impressão para imprimir ou salvar em PDF. O relatório lista todos os atendimentos do dia com status de comparecimento, procedimento realizado e valores.",
     "filtros": ["Prestador", "Unidade", "Data"],
     "como_exportar": "Clicar no ícone de impressão para imprimir ou salvar em PDF.",
     "conteudo_relatorio": "Lista todos os atendimentos do dia com status de comparecimento, procedimento realizado e valores.",
@@ -764,6 +782,7 @@
     "categoria": "produtos_odontologicos",
     "subcategoria": "combo_orto_clareamento",
     "acoes_zeev": [],
+    "conteudo": "O Combo Orto + Clareamento é exclusivo para aparelho fixo metálico e inclui Clareamento Caseiro com Moldeira. O valor mensal é de R$ 70,00 (manutenção ortodôntica) + R$ 23,18 (parcela do clareamento) = R$ 93,18/mês por 20 meses. O total do clareamento é R$ 463,60. Após as 20 parcelas, o valor volta a R$ 70,00. Os valores de clareamento não podem ser usados em outros tratamentos. Se o valor 'Clareamento Caseiro com uso de Moldeira (Boca Toda) – COMBO' não aparece no campo bônus ao aprovar, abrir chamado no Octadesk solicitando ajuste de R$ 380,00.",
     "valores": {
       "manutencao_ortod": "R$ 70,00/mês",
       "parcela_clareamento": "R$ 23,18/mês",
@@ -793,6 +812,7 @@
     "categoria": "ortodontia",
     "subcategoria": "finalizacao_tratamento",
     "acoes_zeev": [],
+    "conteudo": "Existem três formas de encerrar um tratamento ortodôntico no WebDental: (1) Por contenção e remoção: a clínica lança as contenções e a remoção do aparelho no Odontograma. (2) Por termo de desistência: o paciente assina o termo disponível no WebDental e a clínica envia via Octadesk com cópia do documento de identidade para o suporte finalizar. (3) Por ausência prolongada: se o paciente ficar 1 ano sem comparecer à agenda de ortodontia, o sistema finaliza automaticamente.",
     "formas_encerramento": {
       "por_contencao_e_remocao": "A clínica lança as contenções e a remoção do aparelho no Odontograma",
       "por_termo_de_desistencia": "Paciente assina o termo disponível no WebDental, e a clínica envia via Octadesk com cópia do documento de identidade para o suporte finalizar",
@@ -815,6 +835,7 @@
     "subcategoria": "odontograma",
     "acoes_zeev": [],
     "caminho_acesso": "Tela Inicial > Pacientes > Buscar Paciente Cadastrado > Abrir Odontograma",
+    "conteudo": "Para acessar o odontograma de um paciente no WebDental: Tela Inicial > Pacientes > Buscar Paciente Cadastrado > Abrir Odontograma. A legenda de cores indica: verde = tratamentos apenas orçados, não iniciados; vermelho = tratamentos aprovados pelo paciente, mas não finalizados; azul = tratamentos finalizados pelo profissional.",
     "legenda_cores": {
       "verde": "Tratamentos apenas orçados, não iniciados",
       "vermelho": "Tratamentos aprovados pelo paciente, mas não finalizados",
@@ -838,6 +859,7 @@
     "subcategoria": "ficha_pessoal",
     "acoes_zeev": [],
     "caminho_sistema": "Tela Inicial > Pacientes > Buscar Paciente Cadastrado > selecionar paciente > Abrir Ficha Pessoal > selecionar dado > Alterar",
+    "conteudo": "Para consultar ou alterar dados de um paciente no WebDental: Tela Inicial > Pacientes > Buscar Paciente Cadastrado > selecionar paciente > Abrir Ficha Pessoal > selecionar dado > Alterar. O sistema pode apresentar falhas ao salvar dados de pacientes com nomes com acentos ou caracteres especiais — evitar esses elementos no cadastro. Se ocorrer erro ao salvar, verificar se o CEP está sem hífen (ex: 14000000).",
     "problemas_conhecidos": [
       "O sistema pode apresentar falhas ao salvar dados de pacientes com nomes com acentos ou caracteres especiais — evitar esses elementos no cadastro",
       "Se ocorrer erro ao salvar, verificar se o CEP está sem hífen (ex: 14000000)"
@@ -858,6 +880,7 @@
     "categoria": "financeiro",
     "subcategoria": "tabela_comissoes",
     "acoes_zeev": [],
+    "conteudo": "Os percentuais de comissão padrão por especialidade no WebDental são: Clínica Geral, Ortodontia, Odontopediatria, Periodontia, Endodontia, Prótese e Estética — 25% com material da clínica e até 32% com material próprio. Implantodontia — entre 40% e 60% conforme negociação (dentista responsável por todo o material incluindo a prótese). Pagamento parcelado se aplica a Estética e Implantodontia. Exemplo de cálculo: procedimento de R$ 19,50, imposto total de 10,50% (8% imposto + 2,50% taxa de cartão) = desconto de R$ 2,05, valor líquido para a clínica de R$ 17,46, comissão de 25% = R$ 4,36.",
     "comissoes": {
       "clinica_geral_ortodontia_odontopediatria_periodontia_endodontia_protese_estetica": {
         "com_material_clinica": "25%",
@@ -892,9 +915,9 @@
     "categoria": "financeiro",
     "subcategoria": "impostos_pejotizacao",
     "acoes_zeev": ["A075"],
+    "conteudo": "O imposto total no WebDental está vinculado ao regime tributário da unidade no momento de abertura e é descontado de todas as vendas feitas via TEF (maquininha: Pix, débito e crédito). Para verificar o imposto cadastrado: WebDental > Configurações > Unidade de Atendimento > localizar unidade > Dados Financeiros > campo 'Imposto total'. Após pejotização, a clínica pode solicitar a remoção do imposto via Zeev A075 — opção 'Alteração de taxas de impostos cadastradas'. O imposto só será removido das novas vendas após a exclusão; vendas anteriores permanecem com desconto. O sistema identifica qualquer desconto como 'imposto', mesmo que parte seja taxa de cartão.",
     "acao_zeev_detalhe": "A075 — opção 'Alteração de taxas de impostos cadastradas' (após pejotização dos profissionais)",
     "como_verificar_imposto": "WebDental > Configurações > Unidade de Atendimento > localizar unidade > Dados Financeiros > campo 'Imposto total'",
-    "conteudo": "O imposto total está vinculado ao regime tributário da unidade no momento de abertura. É descontado de todas as vendas feitas via TEF (maquininha: Pix, débito e crédito).",
     "regras": [
       "Após pejotização, a clínica pode solicitar a remoção do imposto via Zeev A075",
       "O imposto só será removido das novas vendas após a exclusão; vendas anteriores permanecem com desconto",
@@ -916,7 +939,7 @@
     "categoria": "financeiro",
     "subcategoria": "integracao_tef",
     "acoes_zeev": [],
-    "conteudo": "Quando vendas realizadas pela maquininha (TEF) não aparecem no sistema WebDental, o problema é de integração entre a máquina e o sistema.",
+    "conteudo": "Quando vendas realizadas pela maquininha (TEF) não aparecem no sistema WebDental, o problema é de integração entre a máquina e o sistema. Para verificar se a TEF está habilitada: Configurações > Painel de Controle (no Amei) ou Configurações (no WebDental). Se os valores apareceram no banco mas não no sistema, abrir chamado no Octadesk anexando o comprovante de pagamento e informando os dados do paciente para lançamento manual.",
     "como_verificar_tef": "Verificar se a TEF está habilitada na clínica em Configurações > Painel de Controle (no Amei) ou Configurações (no WebDental).",
     "solucao_valores_no_banco_nao_no_sistema": "Se os valores apareceram no banco mas não no sistema, abrir chamado no Octadesk anexando o comprovante de pagamento e informando os dados do paciente para lançamento manual.",
     "restricoes": [],
@@ -944,6 +967,7 @@
     "subcategoria": "plataforma_zeev",
     "acoes_zeev": ["A006", "A027", "A037", "A041", "A059", "A068", "A069", "A071", "A072", "A073", "A075", "LAB-01", "INT-02", "PROJ-02", "MLT-01", "PERF-01"],
     "url_acesso": "https://amorsaude.zeev.it/login",
+    "conteudo": "O Zeev é a plataforma de abertura de chamados operacionais da AmorSaúde. Para acessar: https://amorsaude.zeev.it/login. Para acompanhar chamados: Acompanhar Solicitações > filtrar 'Todas as solicitações que tenho acesso'. Se o chamado estiver com pendência da clínica, acessar por 'Executar Tarefas' — não apenas visualizar. Os principais fluxos do BackOffice são: A006 (cadastro profissionais Amei), A073 (cadastro profissionais WebDental), A027 (cadastro funcionários Amei), A072 (cadastro funcionários WebDental), A037 (inativação Amei), A068 (inativação WebDental), A041 (parcerias locais), A059 (contas financeiras), A069 (fornecedores locais), A071 (manutenção de custos), A075 (solicitações operacionais). Outros fluxos: LAB-01 (AmorLab), INT-02 (Inteligência de Negócios), PROJ-02 (Projetos), MLT-01 (cVortex), PERF-01 (Consultoria).",
     "como_acompanhar": "Acompanhar Solicitações > filtrar 'Todas as solicitações que tenho acesso'",
     "chamado_com_pendencia": "Se o ticket estiver com pendência da clínica, acessar por 'Executar Tarefas' — não apenas visualizar.",
     "mapeamento_fluxos_backoffice": {
@@ -983,6 +1007,7 @@
     "categoria": "chamados",
     "subcategoria": "localizacao_chamados",
     "acoes_zeev": [],
+    "conteudo": "Para localizar chamados pendentes no Zeev, acessar 'Executar Tarefas' na tela principal e usar o campo de pesquisa de solicitação ou filtrar por tipo de solicitação. Pesquisar apenas pelo número do chamado sem informar tipo de solicitação pode não encontrar o resultado — pode ser necessário filtrar pelo tipo (ex: PA-06 para Cadastros Obrigatórios de Odontologia). Se o chamado foi rejeitado ou finalizado, ele não aparece em 'Executar Tarefas' — buscar em 'Acompanhar Solicitações' com filtro 'Todas as solicitações que tenho acesso'.",
     "como_localizar": "Acessar 'Executar Tarefas' na tela principal e usar o campo de pesquisa de solicitação ou filtrar por tipo de solicitação.",
     "dica_pesquisa": "Pesquisar apenas pelo número do chamado sem informar tipo de solicitação pode não encontrar o resultado — pode ser necessário filtrar pelo tipo (ex: PA-06 para Cadastros Obrigatórios de Odontologia).",
     "chamado_nao_aparece": "Se o chamado foi rejeitado ou finalizado, ele não aparece em 'Executar Tarefas' — buscar em 'Acompanhar Solicitações' com filtro 'Todas as solicitações que tenho acesso'.",
@@ -1011,6 +1036,7 @@
     "subcategoria": "plataforma_octadesk",
     "acoes_zeev": [],
     "url_acesso_clinica": "https://webdentalsolucoes.octadesk.com/login",
+    "conteudo": "O Octadesk é o sistema exclusivo de chamados de suporte técnico para o WebDental. As clínicas acessam pelo endereço https://webdentalsolucoes.octadesk.com/login. Use o Octadesk para: cancelamento de aprovação, cancelamento de tratamento, cancelamento de finalização de dentista, erro em vinculação no plano de contas, cancelamento de transporte de caixa, relatório de bônus, devolução de valores ao paciente, transferência de bônus entre pacientes, cancelamento de despesas em caixa, finalização de manutenção ortodôntica por desistência e inclusão de valor de pagamento por link.",
     "uso": "Sistema exclusivo de chamados de suporte técnico para o WebDental",
     "quando_usar": [
       "Cancelamento de aprovação",
@@ -1049,7 +1075,7 @@
     "subcategoria": "plataforma_yungas",
     "acoes_zeev": [],
     "url_acesso": "https://encr.pw/PFOvf",
-    "uso": "Canal centralizado de comunicação entre a Franqueadora e as franquias. Publicação de Instruções Normativas (INs), materiais padronizados e comunicação com Marketing e Financeiro.",
+    "conteudo": "O Yungas é o canal centralizado de comunicação entre a Franqueadora e as franquias. É utilizado para publicação de Instruções Normativas (INs), materiais padronizados e comunicação com Marketing e Financeiro. Para abrir uma demanda: Caixa de Entrada > Nova Mensagem > Demanda > selecionar Departamento e Subdepartamento. Para dúvidas sobre boletos de royalties: Yungas > Departamento: FINANCEIRO - AmorSaúde > Subdepartamento: Dúvidas Medicina Financeiro.",
     "como_abrir_demanda": "Caixa de Entrada > Nova Mensagem > Demanda > selecionar Departamento e Subdepartamento",
     "duvidas_boletos_royalties": "Yungas > Departamento: FINANCEIRO - AmorSaúde > Subdepartamento: Dúvidas Medicina Financeiro",
     "restricoes": [],
@@ -1070,7 +1096,7 @@
     "subcategoria": "plataforma_jira",
     "acoes_zeev": [],
     "url_acesso": "https://amorsaudesuporte.atlassian.net/servicedesk/customer/user/login",
-    "uso": "Canal de comunicação com a área de Suporte Tech da Franqueadora para erros ou instabilidades nos sistemas: Amei, Feegow, Portal do Paciente e Aplicativo Cartão de Todos.",
+    "conteudo": "O Jira é o canal de comunicação com a área de Suporte Tech da Franqueadora para erros ou instabilidades nos sistemas Amei, Feegow, Portal do Paciente e Aplicativo Cartão de Todos. Para acessar: https://amorsaudesuporte.atlassian.net/servicedesk/customer/user/login. Para abrir um chamado: acessar a página inicial > selecionar o sistema e o assunto > preencher campos obrigatórios > Enviar. Para consultar chamados abertos: Ícone de Perfil > Solicitações.",
     "como_abrir_chamado": "Acessar a página inicial > selecionar o sistema e o assunto > preencher campos obrigatórios > Enviar.",
     "como_consultar_chamados": "Ícone de Perfil > Solicitações",
     "restricoes": [],
@@ -1090,6 +1116,7 @@
     "categoria": "cadastro",
     "subcategoria": "cadastro_profissional_medico",
     "acoes_zeev": ["A006"],
+    "conteudo": "Para cadastrar um novo profissional médico no Amei, o fluxo completo tem 4 etapas sequenciais: (1) Procedimentos de Agenda: inserir na aba 'Procedimentos de Agenda' todos os exames e procedimentos que o profissional realizará. (2) Abertura de Grade: em 'Horários de Atendimento', clicar em 'Incluir' para definir dias e horários. (3) Restrição de Atendimento: verificar se há restrições por idade ou sexo. (4) Fornecedor: vincular o profissional como fornecedor em Cadastro > Fornecedores e cadastrar os valores de repasse por procedimento em 'Procedimentos de Fornecedores'. Sem os valores de fornecedor cadastrados, o sistema não permite vincular o procedimento ao profissional durante a venda. Para novo cadastro, usar Zeev A006 (Medicina/Amei) ou A073 (Odontologia/WebDental).",
     "etapas_sequenciais": [
       {
         "etapa": 1,
@@ -1135,6 +1162,7 @@
     "subcategoria": "bloqueio_agenda",
     "acoes_zeev": [],
     "caminho_sistema": "Cadastro > Lista de Profissionais > Editar Profissional (ícone lápis) > Horários e Atendimentos > Bloqueio de Agenda",
+    "conteudo": "Para bloquear a agenda de um médico no Amei, acessar: Cadastro > Lista de Profissionais > Editar Profissional (ícone lápis) > Horários e Atendimentos > Bloqueio de Agenda. Os campos necessários são: data inicial, data final, dias da semana, horário inicial, horário final, área de atuação e descrição (motivo). Atenção: pacientes agendados em horários bloqueados são automaticamente transferidos para a lista de espera; essa ação é irreversível; o sistema não permite conflitos com agendas em outras unidades.",
     "campos_bloqueio": ["Data inicial", "Data final", "Dias da semana", "Horário inicial", "Horário final", "Área de atuação", "Descrição (motivo)"],
     "consequencias": [
       "Pacientes agendados em horários bloqueados são automaticamente transferidos para a lista de espera",
@@ -1157,6 +1185,7 @@
     "categoria": "financeiro",
     "subcategoria": "caixas_cadeado",
     "acoes_zeev": [],
+    "conteudo": "No módulo financeiro do Amei, os caixas são visualizados em Financeiro > Caixas > clicar em 'Detalhar' para ver as transações. Todo colaborador que realiza recebimentos precisa de um caixa vinculado ao seu guichê. O cadeado fechado impede movimentações financeiras posteriores no período e é acessado em Financeiro > Cadeados. Para qualquer correção após o fechamento, é necessária autorização do sócio via e-mail ao SAF para reabertura. Para reabrir: clicar no ícone de cadeado > selecionar o módulo a ser desbloqueado > Salvar. Orientar a unidade a realizar as correções e fechar o cadeado até o fim do dia.",
     "caixas": {
       "como_visualizar": "Financeiro > Caixas > clicar em 'Detalhar' para ver as transações",
       "observacao": "Todo colaborador que realiza recebimentos precisa de um caixa vinculado ao seu guichê"
@@ -1184,6 +1213,7 @@
     "categoria": "financeiro",
     "subcategoria": "royalties_split",
     "acoes_zeev": [],
+    "conteudo": "Os royalties de medicina são calculados como 4% do faturamento bruto mensal, descontados os splits já realizados. Existem dois tipos de split: automático (ocorre no momento da venda, se houver saldo disponível na conta MaisTodos) e por captura (MaisTodos captura 4% do total do período, mas somente se os cadeados estiverem fechados). Para dúvidas sobre royalties: Yungas > Departamento: Financeiro > Subdepartamento: Dúvidas Medicina Financeiro. O imposto no Amei é lançado pela própria unidade em Contas a Pagar.",
     "calculo_royalties": "4% do faturamento bruto mensal, descontados os splits já realizados.",
     "tipos_split": {
       "automatico": "Ocorre no momento da venda, se houver saldo disponível na conta MaisTodos",
@@ -1208,7 +1238,7 @@
     "subcategoria": "adimplencia_paciente",
     "acoes_zeev": [],
     "url_consulta_manual": "https://parceiro.cartaodetodos.com.br/",
-    "conteudo": "Para um paciente ter desconto nas clínicas, ele precisa estar adimplente com o Cartão de Todos. O Amei verifica isso automaticamente. Pacientes inadimplentes não têm direito ao desconto. O sistema exibirá o status de inadimplência na tela do paciente.",
+    "conteudo": "Para um paciente ter desconto nas clínicas, ele precisa estar adimplente com o Cartão de Todos. O Amei verifica isso automaticamente. Pacientes inadimplentes não têm direito ao desconto e o sistema exibirá o status de inadimplência na tela do paciente. Para consulta manual, acessar: https://parceiro.cartaodetodos.com.br/",
     "restricoes": [],
     "casos_validados": [],
     "faq": [
@@ -1225,6 +1255,7 @@
     "categoria": "prontuario",
     "subcategoria": "assinatura_digital",
     "acoes_zeev": [],
+    "conteudo": "No Amei, a assinatura digital pode ser feita individualmente ao finalizar o atendimento ou em lote pela tela 'Assinatura de Atendimentos'. Para liberar temporariamente um profissional da obrigatoriedade de assinatura: Cadastro > Lista de Profissionais > localizar profissional > aba 'Assinatura' > habilitar a flag e selecionar o motivo. Atenção: a flag NÃO desativa automaticamente — deve ser desativada manualmente após o uso.",
     "como_assinar": {
       "individual": "Ao finalizar o atendimento",
       "em_lote": "Pela tela 'Assinatura de Atendimentos'"
@@ -1247,6 +1278,7 @@
     "categoria": "laboratorio",
     "subcategoria": "resultados_exames",
     "acoes_zeev": [],
+    "conteudo": "Desde 04/04/2025, os resultados de exames laboratoriais dos laboratórios DB Diagnósticos do Brasil e Hermes Pardini estão disponíveis no sistema Amei e no Portal do Paciente (https://paciente.amorsaude.com.br/amorsaude). Para histórico financeiro de pacientes Feegow não encontrado no BI, orientar envio de e-mail para a equipe de dados com: declaração de consentimento assinada pela paciente, cópia de documento de identidade, ou documento processual (em casos judiciais).",
     "disponivel_desde": "04/04/2025",
     "laboratorios_integrados": ["DB Diagnósticos do Brasil", "Hermes Pardini"],
     "url_portal_paciente": "https://paciente.amorsaude.com.br/amorsaude",
@@ -1267,6 +1299,7 @@
     "categoria": "financeiro",
     "subcategoria": "cadeados_odontologia",
     "acoes_zeev": [],
+    "conteudo": "Desde outubro/2025, os cadeados financeiros da odontologia são fechados automaticamente em lote, considerando 5 dias úteis anteriores à data atual (ex: em 20/10, fecha cadeados até 13/10). A cor indica o tipo de fechamento: azul = fechado automaticamente, NÃO contabilizado para indicador de performance (impacta comissão e premiação); verde = fechado manualmente, conta para o indicador. Para reabrir: solicitar ao SAF com autorização do sócio pelo WhatsApp (16) 2018-2330, de segunda a sexta das 08h30 às 17h00. A reabertura de cadeados do mês anterior é aceita somente até o 5º dia útil do mês vigente. A hierarquia de fechamento no BI é: 1º cadeado = Coordenador/Financeiro; 2º cadeado = Gerente (login cadeadoXXX); 3º cadeado = Sócio.",
     "automacao": {
       "vigente_desde": "outubro/2025",
       "logica": "Cadeados fechados automaticamente em lote, considerando 5 dias úteis anteriores à data atual (ex: em 20/10, fecha cadeados até 13/10)"
@@ -1299,6 +1332,7 @@
     "categoria": "analytics",
     "subcategoria": "power_bi_acesso",
     "acoes_zeev": ["INT-02"],
+    "conteudo": "O Power BI da AmorSaúde é acessado pelo endereço https://app.powerbi.com/groups/51cc537c-5473-407a-bba405bb672d3e9e/list usando e-mail corporativo e senha. Os dashboards disponíveis são: (1) Power BI Medicina Amei, (2) Power BI Medicina Feegow, (3) Power BI Odontologia, (4) Antigo BI Odontologia (https://novobi.webdentalsolucoes.io/pages/login — login e senha iguais ao WebDental). Para reportar inconsistências no BI, usar Zeev INT-02.",
     "url_acesso_principal": "https://app.powerbi.com/groups/51cc537c-5473-407a-bba405bb672d3e9e/list",
     "credenciais": "E-mail corporativo e senha",
     "dashboards": {
@@ -1325,6 +1359,7 @@
     "categoria": "atendimento",
     "subcategoria": "plataforma_cvortex",
     "acoes_zeev": ["MLT-01"],
+    "conteudo": "O cVortex é a plataforma de atendimento via WhatsApp do SAF. Os contatos são: central de vendas (11) 5330-0146, suporte cVortex (11) 5330-0323 e financeiro faturamentoclientes@cvortex.io. Para atualizar o bot do WhatsApp, abrir chamado no Zeev MLT-01 — a Franqueadora analisa em até 5 dias úteis.",
     "contatos": {
       "central_de_vendas": "(11) 5330-0146",
       "suporte_cvortex": "(11) 5330-0323",
@@ -1347,6 +1382,7 @@
     "categoria": "treinamento",
     "subcategoria": "acesso_plataforma",
     "acoes_zeev": ["A027", "A040"],
+    "conteudo": "A plataforma de treinamentos da AmorSaúde é acessada pelo endereço https://amorsaudetreinamentos.com/login/index.php usando CPF + senha cadastrada. Desde 14/04/2026, o cadastro é automático quando o funcionário é registrado no Zeev A027 (fluxo Amei) — o colaborador recebe e-mail com link para criar senha (disponível apenas para medicina por ora). Para dados incorretos ou e-mail não recebido, acionar via Zeev A040.",
     "url_acesso": "https://amorsaudetreinamentos.com/login/index.php",
     "automacao": {
       "vigente_desde": "14/04/2026",
@@ -1373,7 +1409,8 @@
     "sistema": ["amei", "power_bi"],
     "categoria": "cadastro",
     "subcategoria": "inativacao_profissional",
-    "acoes_zeev": [],
+    "acoes_zeev": ["A037"],
+    "conteudo": "Para inativar um profissional médico no Amei, usar o Zeev A037. Após a inativação, os agendamentos do profissional podem ser recuperados pelo Power BI: BI > Relatórios > Agendamentos > ajustar datas > Exportar Dados > filtrar por Profissional e Área de Atuação. Para dúvidas sobre o processo de inativação ou impacto na agenda, contatar a Gestão de Rede pelo WhatsApp https://wa.me/16997791379.",
     "recuperar_agendamentos_bi": "BI > Relatórios > Agendamentos > ajustar datas > Exportar Dados > filtrar por Profissional e Área de Atuação",
     "contato_gestao_rede": "https://wa.me/16997791379",
     "restricoes": [],
@@ -1381,7 +1418,8 @@
     "faq": [
       "A agenda do médico sumiu após inativação, o que fazer?",
       "Como recuperar os agendamentos de um profissional inativado?",
-      "Inativei um médico e perdi a agenda, como resolver?"
+      "Inativei um médico e perdi a agenda, como resolver?",
+      "Como inativar profissional médico no Amei?"
     ]
   },
   {
@@ -1391,6 +1429,7 @@
     "categoria": "processos_saf",
     "subcategoria": "priorizacao_chamados",
     "acoes_zeev": [],
+    "conteudo": "A priorização de chamados no SAF segue o roteamento correto por sistema: Zeev para cadastros, Octadesk para erros no WebDental e Yungas para Marketing, Financeiro e Projetos. As especialidades com prioridade máxima no cadastro de profissionais são: Clínica Médica, Pediatria, Ginecologia, Oftalmologia, Cardiologia e Substituição de agenda de profissional. Para chamados dentro do prazo (SLA), orientar a clínica a acompanhar pelo Zeev. Para chamados fora do prazo, encaminhar ao grupo da área responsável conforme o Anexo I — Lista de Contatos.",
     "roteamento": {
       "zeev": "Cadastros",
       "octadesk": "Erros no WebDental",
@@ -1414,7 +1453,8 @@
       "Como priorizar os chamados recebidos no SAF?",
       "Qual o SLA do Zeev para cadastro de profissional?",
       "O chamado está fora do prazo, o que fazer?",
-      "Quais especialidades têm prioridade no cadastro?"
+      "Quais especialidades têm prioridade no cadastro?",
+      "Como fazer a triagem correta de chamados?"
     ]
   },
   {
@@ -1424,6 +1464,7 @@
     "categoria": "setores_internos",
     "subcategoria": "contatos_setores",
     "acoes_zeev": ["LAB-01"],
+    "conteudo": "O BackOffice pode ser contatado pelo e-mail backoffice@amorsaude.com ou pelo Teams (Operações + BackOffice). Suas atribuições incluem abertura e migração de unidades, publicação de Instruções Normativas, auditoria de documentação e cadastros gerais. O AmorLab é responsável por toda a operação laboratorial da rede, integrando clínicas com laboratórios DB e Hermes Pardini. Contato via Zeev LAB-01 ou Teams (Suporte AmorLab) com a coordenadora Sarah Andrade. Para exame sem executante vinculado, abrir ticket via Zeev LAB-01. O Jurídico pode ser acionado pelo e-mail juridico@amorsaude.com para dúvidas sobre contratos e documentos.",
     "contatos": {
       "backoffice": {
         "email": "backoffice@amorsaude.com",
@@ -1459,7 +1500,7 @@
     "categoria": "juridico_tributario",
     "subcategoria": "pejotizacao",
     "acoes_zeev": ["A075"],
-    "conteudo": "A pejotização é o processo de regularização dos profissionais como pessoa jurídica, com divisão de receitas (Revenue Share) entre profissional e clínica.",
+    "conteudo": "A pejotização é o processo de regularização dos profissionais como pessoa jurídica, com divisão de receitas (Revenue Share) entre profissional e clínica. A empresa parceira para este processo é a Sinaxys (contato@sinaxys.com / (31) 3190-0211), que oferece serviço de concierge para a transição. Para dúvidas sobre o processo: Yungas > Caixa de Entrada > Nova Demanda > Novos Negócios Projetos. Após a pejotização, a clínica pode solicitar a remoção do imposto via Zeev A075.",
     "empresa_parceira": {
       "nome": "Sinaxys",
       "servico": "Concierge para transição de pejotização",
@@ -1484,6 +1525,7 @@
     "categoria": "financeiro",
     "subcategoria": "boletos_royalties",
     "acoes_zeev": [],
+    "conteudo": "Para acessar boletos de royalties, acessar https://celertech.bubbleapps.io/amorsaude e preencher com o CNPJ da unidade. Os tipos de boleto disponíveis são: royalties medicina, royalties odontologia e boleto de SMS da odontologia. Para dúvidas sobre boletos: Yungas > Nova Mensagem > Demanda > Departamento: FINANCEIRO – AmorSaúde > Subdepartamento: Dúvidas Medicina Financeiro.",
     "url_acesso_boletos": "https://celertech.bubbleapps.io/amorsaude (preencher com o CNPJ)",
     "tipos_boleto": ["Royalties medicina", "Royalties odontologia", "Boleto de SMS da odontologia"],
     "duvidas_boletos": "Yungas > Nova Mensagem > Demanda > Departamento: FINANCEIRO – AmorSaúde > Subdepartamento: Dúvidas Medicina Financeiro",
@@ -1503,7 +1545,7 @@
     "categoria": "financeiro",
     "subcategoria": "credito_maistodos",
     "acoes_zeev": [],
-    "conteudo": "O crédito MaisTODOS permite parcelamento via carnê de exames e procedimentos para pacientes, com recebimento pela clínica em até 2 dias úteis.",
+    "conteudo": "O crédito MaisTODOS permite parcelamento via carnê de exames e procedimentos para pacientes, com recebimento pela clínica em até 2 dias úteis. No Amei: ao receber, selecionar Pix > Não TEF > Conta: Empréstimo MaisTODOS. Após confirmação bancária, transferir o saldo para a conta que efetivamente recebeu. No WebDental: o crédito é gerado automaticamente na conta corrente da clínica 2 dias após o lançamento. Se o pagamento por link MaisTODOS não for reconhecido pelo WebDental, abrir chamado no Octadesk com comprovante de pagamento para lançamento manual. Atenção: apenas clínicas piloto participam por enquanto (Amei).",
     "como_registrar": {
       "amei": "Ao receber, selecionar Pix > Não TEF > Conta: Empréstimo MaisTODOS. Após confirmação bancária, transferir o saldo para a conta que efetivamente recebeu.",
       "webdental": "O crédito é gerado automaticamente na conta corrente da clínica 2 dias após o lançamento."
@@ -1526,6 +1568,7 @@
     "categoria": "produtos_servicos",
     "subcategoria": "dentalvidas_mara_ia",
     "acoes_zeev": [],
+    "conteudo": "O DentalVidas é a operadora de planos odontológicos da rede AmorSaúde, regulamentada pela ANS, com 6 planos ativos. Contato pelo WhatsApp https://wa.me/31993114906. A MARA IA é um BOT de atendimento de ponta a ponta para clientes e clínicas (18 unidades), com funcionalidades de agendamentos, vendas, cancelamentos, cobrança de inadimplência e interpretação por áudio. Após 3 tentativas no BOT, o atendimento é derivado para humano. A taxa de atendimento via BOT é de 70%. Para suporte da MARA IA: (85) 9761-3687 com Isabel ou suporte_mara@vinna.one.",
     "dentalvidas": {
       "descricao": "Operadora de planos odontológicos da rede AmorSaúde, regulamentada pela ANS",
       "planos_ativos": 6,
@@ -1559,6 +1602,7 @@
     "categoria": "regras_assistente",
     "subcategoria": "comportamento_respostas",
     "acoes_zeev": [],
+    "conteudo": "O assistente SAF deve seguir estas regras de comportamento: responder estritamente o que foi perguntado sem adicionar processos desnecessários; nunca citar remanejamento de pacientes em fluxos de abertura de horários; nunca misturar sistemas (se a dúvida for sobre médicos/Amei, ignorar menus de Cadeiras/WebDental); nunca inventar códigos Zeev, e-mails ou processos; nunca justificar erros internos como 'atraso entre sistema e aplicativo'; usar frases de conforto apenas se o usuário expressar medo ou receio explicitamente. A estrutura de resposta deve ser: abertura direta ('Para [ação/objetivo]...'), corpo com solução técnica com nome do sistema e caminho ou código Zeev, e fechamento com 'Ajudo em algo mais?'.",
     "regras": [
       "Responder estritamente o que foi perguntado — sem adicionar processos ou obrigatoriedades que não fazem parte da execução solicitada",
       "Nunca citar remanejamento de pacientes em fluxos de abertura ou configuração de horários, a menos que a pergunta seja especificamente sobre alteração, exclusão ou substituição de profissionais em grades já existentes",
@@ -1588,6 +1632,7 @@
     "categoria": "institucional",
     "subcategoria": "lista_contatos",
     "acoes_zeev": [],
+    "conteudo": "Contatos úteis do SAF: BackOffice — backoffice@amorsaude.com / Teams: Operações + BackOffice. Marketing — Ana Laura (16) 99769-2866, Jéssica (16) 99720-7220, Mariane (16) 99602-6376. Suporte WebDental/Octadesk — wanderlucio.neves@amorsaude.com / Teams: Suporte WebDental. AmorLab — Teams: Suporte AmorLab / coordenadora Sarah Andrade. Plano Odontológico — WhatsApp (31) 99311-4906 / supervisora Ariane Herrera. Financeiro — Lauriele Santos, Bruna Brizotti, Eduardo Moraes, Felipe Oliveira (Gerente). Suporte MaisTODOS — (16) 98220-0199. Suporte Amei — coordenadora Tamara Saturno / André Medina (16) 99643-1664. Área Técnica — gerencia.tecnica@amorsaude.com / Carla Costa (Odonto) / Luis Rocha (Medicina) / Leonardo Botelho (Gerente). Telemedicina — clínicas (16) 993431885 / pacientes (16) 99621-0577. Jurídico — juridico@amorsaude.com. Gestão de Rede — https://wa.me/16997791379. cVortex — central de vendas (11) 5330-0146 / suporte (11) 5330-0323. Inteligência de Negócios — Guilherme Correa / Zeev INT-02.",
     "contatos": {
       "backoffice": { "email": "backoffice@amorsaude.com", "teams": "Operações + BackOffice" },
       "marketing": [
