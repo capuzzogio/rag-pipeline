@@ -96,9 +96,15 @@ RAG_SAF/
 
 A API está disponível em:
 
-👉 https://capuzzogio-rag-pipeline.hf.space/docs
+⚙️ **API (FastAPI + RAG):**  
+👉 https://capuzzogio-rag-pipeline.hf.space/docs  
 
-O índice FAISS é gerado automaticamente no build do container.
+> O índice FAISS é gerado automaticamente no build do container.
+
+---
+
+🖥️ **Interface (Streamlit):**  
+👉 https://rag-app-chat-fsytu28gl4jjf5dhtjgzi7.streamlit.app/
 
 ---
 
