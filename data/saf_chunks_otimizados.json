@@ -1163,7 +1163,15 @@
     "acoes_zeev": [],
     "caminho_sistema": "Cadastro > Lista de Profissionais > Editar Profissional (ícone lápis) > Horários e Atendimentos > Bloqueio de Agenda",
     "conteudo": "Para bloquear a agenda de um médico no Amei, acessar: Cadastro > Lista de Profissionais > Editar Profissional (ícone lápis) > Horários e Atendimentos > Bloqueio de Agenda. Os campos necessários são: data inicial, data final, dias da semana, horário inicial, horário final, área de atuação e descrição (motivo). Atenção: pacientes agendados em horários bloqueados são automaticamente transferidos para a lista de espera; essa ação é irreversível; o sistema não permite conflitos com agendas em outras unidades.",
-    "campos_bloqueio": ["Data inicial", "Data final", "Dias da semana", "Horário inicial", "Horário final", "Área de atuação", "Descrição (motivo)"],
+    "campos_bloqueio": [
+      "Data inicial",
+      "Data final",
+      "Dias da semana",
+      "Horário inicial",
+      "Horário final",
+      "Área de atuação",
+      "Descrição (motivo)"
+    ],
     "consequencias": [
       "Pacientes agendados em horários bloqueados são automaticamente transferidos para a lista de espera",
       "Essa ação é irreversível",
@@ -1634,7 +1642,10 @@
     "acoes_zeev": [],
     "conteudo": "Contatos úteis do SAF: BackOffice — backoffice@amorsaude.com / Teams: Operações + BackOffice. Marketing — Ana Laura (16) 99769-2866, Jéssica (16) 99720-7220, Mariane (16) 99602-6376. Suporte WebDental/Octadesk — wanderlucio.neves@amorsaude.com / Teams: Suporte WebDental. AmorLab — Teams: Suporte AmorLab / coordenadora Sarah Andrade. Plano Odontológico — WhatsApp (31) 99311-4906 / supervisora Ariane Herrera. Financeiro — Lauriele Santos, Bruna Brizotti, Eduardo Moraes, Felipe Oliveira (Gerente). Suporte MaisTODOS — (16) 98220-0199. Suporte Amei — coordenadora Tamara Saturno / André Medina (16) 99643-1664. Área Técnica — gerencia.tecnica@amorsaude.com / Carla Costa (Odonto) / Luis Rocha (Medicina) / Leonardo Botelho (Gerente). Telemedicina — clínicas (16) 993431885 / pacientes (16) 99621-0577. Jurídico — juridico@amorsaude.com. Gestão de Rede — https://wa.me/16997791379. cVortex — central de vendas (11) 5330-0146 / suporte (11) 5330-0323. Inteligência de Negócios — Guilherme Correa / Zeev INT-02.",
     "contatos": {
-      "backoffice": { "email": "backoffice@amorsaude.com", "teams": "Operações + BackOffice" },
+      "backoffice": {
+        "email": "backoffice@amorsaude.com",
+        "teams": "Operações + BackOffice"
+      },
       "marketing": [
         { "nome": "Ana Laura", "whatsapp": "(16) 99769-2866" },
         { "nome": "Jéssica", "whatsapp": "(16) 99720-7220" },
@@ -1701,6 +1712,578 @@
       "Qual o número do suporte MaisTODOS?",
       "Como contatar a área técnica de odontologia?",
       "Qual o e-mail do jurídico da AmorSaúde?"
+    ]
+  },
+  {
+    "id": "chunk_062",
+    "titulo": "Parceria local para exames laboratoriais — como solicitar autorização",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "parcerias_locais",
+    "acoes_zeev": ["A041"],
+    "conteudo": "Para verificar se a franqueadora autoriza uma parceria local (ex: empresa que envia funcionários para coleta de exames na clínica), é necessário abrir um chamado no Zeev pelo fluxo A041 — Solicitação de cadastro de parcerias locais. O BackOffice irá analisar e responder diretamente no chamado.",
+    "restricoes": [
+      "A autorização não é dada diretamente pelo SAF — passa obrigatoriamente pelo BackOffice via Zeev A041"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica perguntou se poderia ter parceria com empresa que mandaria funcionários para coleta de exames",
+        "solucao": "Orientado abrir Zeev A041 para análise do BackOffice"
+      }
+    ],
+    "faq": [
+      "Posso ter convênio com empresa para exames laboratoriais?",
+      "A franqueadora autoriza parceria local para coleta de exames?",
+      "Como solicitar cadastro de parceria local?",
+      "Qual chamado abrir para parceria com empresa externa?"
+    ]
+  },
+  {
+    "id": "chunk_063",
+    "titulo": "WebDental — Como ver o lucro da clínica (Fatura x Despesas)",
+    "sistema": ["webdental"],
+    "categoria": "financeiro",
+    "subcategoria": "relatorio_lucro",
+    "acoes_zeev": [],
+    "caminho_sistema": "Relatórios > Financeiros > Fatura x Despesas",
+    "conteudo": "Para visualizar o lucro da clínica odontológica no WebDental, acessar: Relatórios > Financeiros > Fatura x Despesas. Esse relatório apresenta a diferença entre o faturamento e as despesas do período.",
+    "restricoes": [],
+    "casos_validados": [
+      {
+        "descricao": "Clínica perguntou onde ver o lucro no sistema",
+        "solucao": "Relatórios > Financeiros > Fatura x Despesas"
+      }
+    ],
+    "faq": [
+      "Onde vejo o lucro da clínica no WebDental?",
+      "Como ver quanto a clínica lucrou?",
+      "Onde fica o relatório financeiro de fatura x despesas?",
+      "Como consultar o resultado financeiro da clínica?"
+    ]
+  },
+  {
+    "id": "chunk_064",
+    "titulo": "Zeev — Chamado finalizado não pode ser reaberto",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "reabertura_chamado",
+    "acoes_zeev": [],
+    "conteudo": "Chamados finalizados no Zeev não podem ser reabertos. Quando uma solicitação é encerrada pelo robô por falta de retorno ou pela área de cadastro, é necessário abrir um novo chamado. Ao abrir o novo chamado, informar o número do chamado anterior para referência e enviar todos os documentos e informações necessários desde o início.",
+    "restricoes": [
+      "Chamados finalizados não permitem reabertura",
+      "É necessário abrir novo chamado e referenciar o número anterior"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica pediu reabertura de chamado finalizado por falta de retorno — tinha o documento que faltava",
+        "solucao": "Orientado abrir novo chamado informando o número do anterior e anexando o documento"
+      }
+    ],
+    "faq": [
+      "Como reabrir um chamado finalizado no Zeev?",
+      "O chamado foi fechado, consigo reabrir?",
+      "O Zeev fechou meu chamado automaticamente, o que fazer?",
+      "Meu chamado foi encerrado por falta de retorno, como proceder?"
+    ]
+  },
+  {
+    "id": "chunk_065",
+    "titulo": "Octadesk — Cancelamento de aprovação para gerar bônus (não devolução)",
+    "sistema": ["octadesk", "webdental"],
+    "categoria": "chamados",
+    "subcategoria": "cancelamento_aprovacao_bonus",
+    "acoes_zeev": [],
+    "conteudo": "Quando o paciente não vai realizar um tratamento já aprovado mas deseja utilizar o valor em outro tratamento (sem devolução), o chamado no Octadesk deve ser aberto especificando que o objetivo é gerar bônus na conta do paciente — NÃO como cancelamento de aprovação. Quando se descreve apenas 'cancelamento de aprovação', o sistema entende que o valor será devolvido ao paciente. É obrigatório informar: categoria correta, forma de pagamento na autorização do sócio, e que a finalidade é crédito/bônus para uso futuro.",
+    "restricoes": [
+      "Cancelamento de aprovação ≠ geração de bônus — são categorias e fluxos diferentes no Octadesk",
+      "A autorização do sócio deve conter a forma de pagamento",
+      "O valor na aba do sistema deve coincidir com o valor na autorização do sócio"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica abriu múltiplos chamados de cancelamento de aprovação mas queria gerar bônus para uso em outro tratamento",
+        "solucao": "Orientado abrir chamado no Octadesk especificando explicitamente que é para gerar bônus, com autorização do sócio contendo forma de pagamento e categoria correta"
+      }
+    ],
+    "faq": [
+      "Como cancelar aprovação para usar em outro tratamento no WebDental?",
+      "Quero transformar aprovação em bônus, como abrir chamado no Octadesk?",
+      "Qual a diferença entre cancelamento de aprovação e geração de bônus?",
+      "O paciente não vai fazer o tratamento mas quer usar o valor em outro, o que fazer?"
+    ]
+  },
+  {
+    "id": "chunk_066",
+    "titulo": "Amei — Cancelamento de recebimento no caixa",
+    "sistema": ["amei"],
+    "categoria": "financeiro",
+    "subcategoria": "cancelamento_recebimento",
+    "acoes_zeev": [],
+    "conteudo": "Para cancelar um recebimento lançado incorretamente no caixa do Amei, o usuário deve acessar o caixa e utilizar a opção de cancelamento de recebimento. Se a opção de cancelar não aparecer para o usuário, verificar se o perfil de acesso tem permissão para essa ação. Caso o sistema não apresente a opção mesmo com perfil correto, acionar o suporte técnico do Amei via chat.",
+    "identificacao_troco": "Lançamentos de troco aparecem com a sigla 'TR' no extrato do caixa. Uma entrada seguida de despesa com 'TR' indica que foi lançado troco.",
+    "restricoes": [
+      "Se o cancelamento não aparecer disponível, pode ser limitação de perfil de acesso",
+      "Persistindo o problema após verificar o perfil, acionar suporte do Amei via chat"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica identificou lançamento de troco incorreto (entrada de R$40 + despesa TR R$40) e recebimento errado de R$95 em vez de R$55",
+        "solucao": "Identificado o troco pelo sufixo TR no extrato. Para cancelar o recebimento errado, encaminhado vídeo tutorial. Quando a opção não aparecia para o usuário, orientado acionar suporte Amei via chat"
+      }
+    ],
+    "faq": [
+      "Como cancelar um recebimento errado no Amei?",
+      "O que significa TR no extrato do caixa do Amei?",
+      "Lancei o valor errado no caixa, como corrigir?",
+      "A opção de cancelar recebimento não aparece, o que fazer?"
+    ]
+  },
+  {
+    "id": "chunk_067",
+    "titulo": "Amei — Assinatura digital: limites por especialidade (IN 62.1-2025)",
+    "sistema": ["amei"],
+    "categoria": "prontuario",
+    "subcategoria": "assinatura_digital_limites",
+    "acoes_zeev": [],
+    "conteudo": "Conforme a IN 62.1-2025, as regras de assinatura digital no Amei são: para especialidades obrigatórias, o limite é de 20 assinaturas pendentes — após esse limite, o sistema ficará bloqueado. Para as demais especialidades, o limite pode ser de até 50 assinaturas pendentes. Para exames de imagem como ultrassom, a obrigatoriedade segue essa mesma regra conforme a especialidade do profissional. Para consulta completa da normativa: https://app.yungas.com.br/news/#/communicated/38371",
+    "normativa": "IN 62.1-2025 — ASSINATURA ELETRÔNICA EM LOTE",
+    "limites": {
+      "especialidades_obrigatorias": "20 assinaturas pendentes — sistema bloqueia após esse limite",
+      "demais_especialidades": "até 50 assinaturas pendentes"
+    },
+    "restricoes": [],
+    "casos_validados": [
+      {
+        "descricao": "Clínica perguntou se assinatura digital para exames de imagem (ultrassom) é obrigatória",
+        "solucao": "Informado sobre os limites da IN 62.1-2025 e encaminhado link da normativa no Yungas"
+      }
+    ],
+    "faq": [
+      "A assinatura digital é obrigatória para ultrassom?",
+      "Qual o limite de assinaturas pendentes no Amei?",
+      "O sistema vai bloquear se eu não assinar os prontuários?",
+      "Assinatura digital é obrigatória para exames de imagem?",
+      "O que diz a IN 62.1-2025 sobre assinatura eletrônica?"
+    ]
+  },
+  {
+    "id": "chunk_068",
+    "titulo": "WebDental — Erro ao redefinir senha do dentista",
+    "sistema": ["octadesk", "webdental"],
+    "categoria": "acesso_sistemas",
+    "subcategoria": "erro_redefinicao_senha",
+    "acoes_zeev": [],
+    "conteudo": "Quando um dentista tenta redefinir a senha no WebDental e o sistema apresenta erro (falha na tela de redefinição), é necessário abrir um chamado no Octadesk. No chamado, informar: nome completo do profissional, e-mail, CPF, e anexar print da tela com o erro. Descrever que o WebDental está apresentando erro ao fazer o reset de senha.",
+    "restricoes": [
+      "O SAF não resolve erros técnicos de login do WebDental diretamente",
+      "Obrigatório anexar print do erro ao abrir o chamado no Octadesk"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Dentista com login existente tentou redefinir senha e recebeu mensagem de falha",
+        "solucao": "Orientado abrir chamado no Octadesk com nome, e-mail, CPF do profissional e print do erro"
+      },
+      {
+        "descricao": "Primeiro acesso do médico — sistema mostrou que CPF já estava cadastrado",
+        "solucao": "Orientado abrir chamado no Octadesk como Alteração de senha, com documento com foto e print do sistema"
+      }
+    ],
+    "faq": [
+      "Erro ao redefinir senha no WebDental, o que fazer?",
+      "O dentista não consegue trocar a senha no WebDental",
+      "WebDental está com falha na tela de redefinição de senha",
+      "Como resolver erro de reset de senha no WebDental?",
+      "Primeiro acesso do profissional está dando erro de CPF já cadastrado"
+    ]
+  },
+  {
+    "id": "chunk_069",
+    "titulo": "Zeev — Solicitação de prioridade para chamado urgente",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "prioridade_chamado",
+    "acoes_zeev": [],
+    "conteudo": "Quando um chamado no Zeev precisa de prioridade por urgência (ex: profissional com agenda marcada nos próximos dias), o SAF pode solicitar prioridade ao time responsável (BackOffice). A clínica deve acompanhar o andamento pelo próprio Zeev, pois o BackOffice pode solicitar documentação adicional. O SAF não tem como garantir prazo de conclusão — apenas solicita a priorização.",
+    "restricoes": [
+      "O SAF não tem poder de forçar conclusão do chamado — apenas solicita prioridade",
+      "A clínica deve acompanhar pelo Zeev e responder rapidamente se houver solicitação de documentação"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Pediatra com agenda marcada para quarta-feira — chamado A006 aberto no dia anterior",
+        "solucao": "SAF solicitou prioridade ao BackOffice e orientou clínica a acompanhar pelo Zeev"
+      },
+      {
+        "descricao": "Médico inativado precisava ser reativado antes de dia 05/05 para cobrir agenda",
+        "solucao": "Chamado A006 já estava aberto com previsão para 30/04. SAF orientou aguardar e acompanhar pelo Zeev"
+      }
+    ],
+    "faq": [
+      "Como pedir urgência em um chamado do Zeev?",
+      "O profissional tem agenda amanhã e o chamado ainda não foi concluído",
+      "Como acelerar um chamado de cadastro no Zeev?",
+      "Posso pedir prioridade para o BackOffice?"
+    ]
+  },
+  {
+    "id": "chunk_070",
+    "titulo": "Royalties — Divergência entre pagamento em dinheiro e lançamento bancário",
+    "sistema": ["yungas"],
+    "categoria": "financeiro",
+    "subcategoria": "divergencia_royalties",
+    "acoes_zeev": [],
+    "conteudo": "Quando o pagamento de royalties foi feito em dinheiro mas o lançamento apareceu na conta bancária (gerando divergência no caixa), é necessário abrir um chamado no Yungas para o Departamento Financeiro da AmorSaúde. No chamado, anexar o comprovante de pagamento e descrever o que ocorreu (data do pagamento, valor, forma e data em que apareceu no banco).",
+    "canal_correto": "Yungas > Nova Mensagem > Demanda > Departamento: FINANCEIRO – AmorSaúde",
+    "restricoes": [
+      "O SAF não resolve divergências de royalties diretamente — encaminha ao financeiro via Yungas"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica pagou royalties de R$2.589,65 em dinheiro no dia 20/04, mas o lançamento apareceu na conta bancária no dia 22/04, causando divergência no caixa",
+        "solucao": "Orientado abrir chamado no Yungas para o Departamento Financeiro com comprovante de pagamento"
+      }
+    ],
+    "faq": [
+      "Paguei royalties em dinheiro mas apareceu no banco, o que fazer?",
+      "O lançamento de royalties não está batendo com o meu caixa",
+      "Como resolver divergência no pagamento de royalties?",
+      "Onde abro chamado para problema com royalties?"
+    ]
+  },
+  {
+    "id": "chunk_071",
+    "titulo": "WebDental — Alinhador não aparece no sistema (OrthoAligner)",
+    "sistema": ["zeev", "webdental"],
+    "categoria": "cadastro",
+    "subcategoria": "alinhador_orthoaligner",
+    "acoes_zeev": ["PROJ-02"],
+    "conteudo": "Quando o procedimento de alinhador não aparece no WebDental (em nenhuma aba — particular ou Cartão de Todos), a clínica precisa ter solicitado o cadastramento do produto OrthoAligner. Para solicitar, abrir chamado no Zeev pelo fluxo PROJ-02.1 — Manifestação de interesse OrthoAligner. Se o alinhador sumiu após ter estado disponível, também orientar a abertura do mesmo chamado.",
+    "restricoes": [
+      "O SAF não cadastra o alinhador diretamente",
+      "A disponibilização depende de análise e cadastro via Zeev PROJ-02.1"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica relatou que alinhador sumiu do sistema WebDental — não aparecia em nenhuma aba",
+        "solucao": "Orientado abrir Zeev PROJ-02.1 — Manifestação de interesse OrthoAligner"
+      }
+    ],
+    "faq": [
+      "O alinhador não aparece no WebDental, o que fazer?",
+      "Como cadastrar alinhador no sistema?",
+      "OrthoAligner sumiu do sistema, como resolver?",
+      "Qual chamado abrir para habilitar alinhador no WebDental?"
+    ]
+  },
+  {
+    "id": "chunk_072",
+    "titulo": "Marketing — Solicitação de arte e materiais via Yungas",
+    "sistema": ["yungas"],
+    "categoria": "comunicacao",
+    "subcategoria": "solicitacao_marketing",
+    "acoes_zeev": [],
+    "conteudo": "Para solicitar materiais de marketing (ex: arte de adesivo de fachada), o canal correto é o Yungas, abrindo chamado para o Departamento de Marketing. Se o chamado anterior foi fechado, não é possível reabri-lo — é necessário abrir um novo chamado informando o número do anterior. Para envio de fotos comprovando alteração de fachada, o próprio chamado do Yungas já é suficiente — não é necessário enviar por outro canal ou e-mail.",
+    "canal_correto": "Yungas > Nova Mensagem > Demanda > Departamento: Marketing",
+    "restricoes": [
+      "Chamados fechados no Yungas não podem ser reabertos",
+      "O Yungas é o único canal para demandas de Marketing — não há e-mail alternativo"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica precisava de arte de adesivo de fachada com urgência — chamado anterior tinha sido fechado",
+        "solucao": "Orientado abrir novo chamado no Yungas para Marketing informando o número do chamado anterior"
+      },
+      {
+        "descricao": "Clínica perguntou se precisava enviar fotos da nova fachada por outro canal além do Yungas",
+        "solucao": "Informado que o Yungas é suficiente — responder no próprio chamado aberto"
+      }
+    ],
+    "faq": [
+      "Como solicitar arte de fachada para a clínica?",
+      "Onde abro chamado para o Marketing?",
+      "O chamado de marketing foi fechado, como reabrir?",
+      "Preciso enviar foto da fachada, onde mando?",
+      "Além do Yungas, tem outro canal para falar com o Marketing?"
+    ]
+  },
+  {
+    "id": "chunk_073",
+    "titulo": "Amei — Médico inativado inesperadamente (não vinculado à unidade)",
+    "sistema": ["amei", "zeev"],
+    "categoria": "cadastro",
+    "subcategoria": "profissional_inativado",
+    "acoes_zeev": ["A006"],
+    "conteudo": "Quando um profissional médico some do sistema Amei ou aparece como inativo/não vinculado à unidade, o SAF verifica em sistema. Se o profissional não está vinculado à unidade, é necessário abrir ou acompanhar chamado no Zeev A006 para solicitar a vinculação. O sistema não registra o motivo da inativação. Se houver urgência (profissional com agenda nos próximos dias), solicitar prioridade ao BackOffice via SAF e acompanhar o chamado pelo Zeev.",
+    "restricoes": [
+      "O SAF não consegue reativar ou vincular profissionais diretamente",
+      "O sistema não registra o motivo da inativação",
+      "A clínica deve acompanhar pelo Zeev e responder rapidamente a qualquer solicitação de documentação"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Médico foi inativado no dia em que tinha atendimento — clínica precisava dele para cobrir agenda de outro médico no dia 05/05",
+        "solucao": "SAF verificou que profissional não estava vinculado à unidade. Chamado A006 já aberto com previsão para 30/04. Orientado acompanhar pelo Zeev"
+      },
+      {
+        "descricao": "Psicóloga que atendeu em 2025 voltaria a atender — cadastro sumiu do Amei",
+        "solucao": "SAF verificou que acesso estava inativado. Orientado abrir Zeev A006 para reativação"
+      }
+    ],
+    "faq": [
+      "O médico sumiu do sistema Amei, o que fazer?",
+      "Profissional foi inativado sem motivo, como resolver?",
+      "Como reativar um médico inativado no Amei?",
+      "O profissional não está vinculado à nossa unidade, como regularizar?",
+      "A psicóloga voltou a atender mas o cadastro sumiu"
+    ]
+  },
+  {
+    "id": "chunk_074",
+    "titulo": "Amei — Cadastro de novo procedimento ou área de atuação (Saúde da Mulher, Medicina da Família)",
+    "sistema": ["amei", "zeev"],
+    "categoria": "cadastro",
+    "subcategoria": "cadastro_procedimento_area",
+    "acoes_zeev": ["A006"],
+    "conteudo": "No Amei, só é possível cadastrar procedimentos e especialidades reconhecidos pelos conselhos de medicina. Não é possível criar nomenclaturas próprias como 'Saúde da Mulher' ou 'Acompanhamento'. Os tipos de procedimento disponíveis são: Consulta, Exame, Procedimento e Sessão. Para procedimentos próximos de ginecologia, o sistema utiliza as nomenclaturas reconhecidas pelo CRM. Para incluir uma nova área de atuação em um profissional já cadastrado (ex: Medicina da Família e Comunidade), abrir chamado no Zeev A006 > Inclusão de área de atuação — o processo passa por análise e validação do BackOffice.",
+    "tipos_procedimento_disponiveis": ["Consulta", "Exame", "Procedimento", "Sessão"],
+    "restricoes": [
+      "Não é possível cadastrar especialidades fora das nomenclaturas reconhecidas pelos conselhos",
+      "Não existe tipo de procedimento 'Acompanhamento' no sistema",
+      "A inclusão de nova área de atuação passa por análise do BackOffice"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica queria cadastrar procedimento 'Saúde da Mulher' para atender pacientes menores de 16 anos com GOs que não aceitam a idade",
+        "solucao": "Informado que não é possível criar nomenclaturas fora dos conselhos. Sugerido Medicina da Família e Comunidade via Zeev A006 — Inclusão de área de atuação"
+      }
+    ],
+    "faq": [
+      "Como cadastrar Saúde da Mulher no Amei?",
+      "Posso criar um procedimento de acompanhamento no sistema?",
+      "Como incluir Medicina da Família como área de atuação?",
+      "Quais tipos de procedimento existem no Amei?",
+      "Como adicionar nova especialidade a um médico já cadastrado?"
+    ]
+  },
+  {
+    "id": "chunk_075",
+    "titulo": "Amei — Inativação de funcionário (colaborador)",
+    "sistema": ["amei", "zeev"],
+    "categoria": "cadastro",
+    "subcategoria": "inativacao_funcionario",
+    "acoes_zeev": ["A037"],
+    "conteudo": "Para inativar o acesso de um funcionário (colaborador) no Amei, é necessário abrir um chamado no Zeev pelo fluxo A037 — Solicitação de inativação de funcionários (Amei ou WebDental).",
+    "restricoes": [
+      "O SAF não realiza a inativação diretamente — obrigatório usar o Zeev A037"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica perguntou como desativar um colaborador no Amei",
+        "solucao": "Orientado abrir Zeev A037 — Solicitação de inativação de funcionários"
+      }
+    ],
+    "faq": [
+      "Como desativar um colaborador no Amei?",
+      "Como inativar o acesso de um funcionário no sistema?",
+      "Qual chamado abrir para remover acesso de funcionário?",
+      "A037 para que serve?"
+    ]
+  },
+  {
+    "id": "chunk_076",
+    "titulo": "BackOffice — Dúvidas sobre responsável técnico (RT) do posto de coleta",
+    "sistema": ["backoffice"],
+    "categoria": "setores_internos",
+    "subcategoria": "responsavel_tecnico",
+    "acoes_zeev": [],
+    "conteudo": "Para dúvidas relacionadas à documentação e cadastros de responsável técnico (RT) do posto de coleta — como troca de biomédico por médico como RT — o canal correto é o BackOffice, pelo e-mail backoffice@amorsaude.com. O SAF não tem autonomia para validar ou orientar sobre requisitos de documentação de RT.",
+    "canal_correto": "backoffice@amorsaude.com",
+    "restricoes": [
+      "O SAF não responde dúvidas sobre requisitos de RT — encaminha ao BackOffice"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica perguntou se médico pode ser RT do posto de coleta no lugar de biomédico que estava saindo",
+        "solucao": "Orientado entrar em contato com o BackOffice pelo e-mail backoffice@amorsaude.com"
+      }
+    ],
+    "faq": [
+      "Posso trocar o biomédico RT por um médico no posto de coleta?",
+      "Quem responde dúvidas sobre responsável técnico do posto de coleta?",
+      "Como regularizar a documentação do RT da clínica?",
+      "O biomédico RT está saindo, o que fazer?"
+    ]
+  },
+  {
+    "id": "chunk_077",
+    "titulo": "Zeev — Como acompanhar o status de um chamado",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "acompanhamento_chamado",
+    "acoes_zeev": [],
+    "conteudo": "Para consultar o status de qualquer chamado aberto no Zeev, acesse diretamente pelo sistema sem precisar contatar o SAF. O caminho é: acesse https://amorsaude.zeev.it/login > clique em 'Acompanhar Solicitações' > filtre por 'Todas as solicitações que tenho acesso'. Para localizar um chamado específico pelo número, use o campo de pesquisa. Se o chamado não aparecer em 'Acompanhar Solicitações', verifique em 'Executar Tarefas' — pode haver uma pendência aguardando resposta da sua unidade.",
+    "caminho_sistema": "https://amorsaude.zeev.it/login > Acompanhar Solicitações > Todas as solicitações que tenho acesso",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Como verificar o status do meu chamado no Zeev?",
+      "Onde vejo se o meu chamado foi respondido?",
+      "Como consultar um chamado pelo número?",
+      "Como acompanhar o andamento de uma solicitação no Zeev?",
+      "Quero saber se meu chamado foi concluído"
+    ]
+  },
+  {
+    "id": "chunk_078",
+    "titulo": "Zeev — Chamado com pendência da clínica (Executar Tarefas)",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "pendencia_chamado",
+    "acoes_zeev": [],
+    "conteudo": "Quando o BackOffice solicita alguma documentação ou informação adicional, o chamado fica com pendência da clínica e aparece na seção 'Executar Tarefas' do Zeev. Não basta visualizar o chamado — é obrigatório acessar por 'Executar Tarefas' e responder a pendência para que o time responsável dê continuidade. Chamados com pendência não respondida podem ser encerrados automaticamente pelo sistema.",
+    "caminho_sistema": "https://amorsaude.zeev.it/login > Executar Tarefas",
+    "alerta": "Chamados com pendência não respondida podem ser encerrados automaticamente pelo robô.",
+    "restricoes": [],
+    "casos_validados": [
+      {
+        "descricao": "Clínica não encontrava o chamado em Acompanhar Solicitações — o chamado estava com pendência em Executar Tarefas",
+        "solucao": "Orientado acessar Executar Tarefas e responder a pendência do BackOffice"
+      }
+    ],
+    "faq": [
+      "O BackOffice pediu documentação, onde respondo?",
+      "Como responder uma pendência no Zeev?",
+      "Meu chamado tem pendência, o que fazer?",
+      "O chamado foi encerrado por falta de retorno, o que aconteceu?",
+      "Onde fica o Executar Tarefas no Zeev?"
+    ]
+  },
+  {
+    "id": "chunk_079",
+    "titulo": "Zeev — Chamado fora do prazo (SLA)",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "prazo_sla",
+    "acoes_zeev": [],
+    "conteudo": "Cada tipo de chamado no Zeev tem um prazo de atendimento (SLA). Para verificar se o seu chamado está dentro ou fora do prazo, acesse o chamado em 'Acompanhar Solicitações' e verifique a data de abertura e o status atual. Se o chamado estiver fora do prazo, entre em contato com o SAF pelo WhatsApp (16) 2018-2330 ou pelo telefone (16) 2018-2330 de segunda a sexta das 08h30 às 17h00, informando o número do chamado. O SAF irá acionar o time responsável solicitando prioridade.",
+    "prazo_contato_saf": "(16) 2018-2330 — segunda a sexta, 08h30 às 17h00",
+    "restricoes": [
+      "O SAF não tem poder de forçar a conclusão do chamado — apenas solicita prioridade ao time responsável",
+      "A clínica deve continuar acompanhando pelo Zeev após solicitar prioridade"
+    ],
+    "casos_validados": [],
+    "faq": [
+      "Meu chamado está fora do prazo, o que fazer?",
+      "O chamado demorou mais do que deveria, como reclamar?",
+      "Como acionar o SAF para um chamado atrasado?",
+      "Qual o prazo de atendimento dos chamados do Zeev?",
+      "O BackOffice não respondeu meu chamado dentro do prazo"
+    ]
+  },
+  {
+    "id": "chunk_080",
+    "titulo": "Zeev — Chamado urgente: profissional com agenda nos próximos dias",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "urgencia_agenda",
+    "acoes_zeev": ["A006", "A073"],
+    "conteudo": "Quando um chamado de cadastro de profissional (A006 ou A073) é urgente porque o profissional tem agenda marcada nos próximos dias, entre em contato com o SAF pelo WhatsApp (16) 2018-2330 informando: o número do chamado e a data em que o profissional precisa estar ativo. O SAF irá solicitar prioridade ao BackOffice. Enquanto isso, acompanhe o chamado pelo Zeev em 'Acompanhar Solicitações' e responda imediatamente qualquer solicitação de documentação — a demora na resposta pode atrasar ainda mais a conclusão.",
+    "restricoes": [
+      "Mesmo com prioridade solicitada, o BackOffice precisa de tempo para analisar",
+      "Responder rapidamente qualquer pendência de documentação é essencial para agilizar"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Pediatra com agenda na quarta-feira — chamado A006 aberto no dia anterior",
+        "solucao": "SAF solicitou prioridade ao BackOffice. Clínica orientada a acompanhar pelo Zeev"
+      },
+      {
+        "descricao": "Médico que cobriria agenda de outro precisava ser reativado antes do dia 05/05",
+        "solucao": "Chamado A006 já aberto com previsão para 30/04. SAF orientou aguardar e acompanhar pelo Zeev"
+      }
+    ],
+    "faq": [
+      "O profissional tem agenda amanhã e o chamado ainda não foi concluído",
+      "Como pedir urgência para cadastro de médico no Zeev?",
+      "O chamado de cadastro está atrasado e o médico vai atender em breve",
+      "Como acelerar um chamado de cadastro urgente?",
+      "Abri o chamado A006 mas o profissional precisa atender em dois dias"
+    ]
+  },
+  {
+    "id": "chunk_081",
+    "titulo": "Zeev — Documentos obrigatórios por tipo de chamado",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "documentos_chamado",
+    "acoes_zeev": ["A006", "A027", "A037", "A068", "A073"],
+    "conteudo": "Para evitar rejeições e retrabalho nos chamados do Zeev, envie todos os documentos necessários já na abertura. Para chamados de cadastro de profissional (A006/A073): enviar documento de identidade com foto do profissional e registro no conselho (CRM, CRO, CRP etc.). Para chamados de cadastro de funcionário (A027/A072): enviar documento de identidade. Para chamados de inativação (A037/A068): informar nome completo e CPF do profissional ou funcionário a ser inativado. Em todos os casos: preencha o campo de descrição com o máximo de detalhes possível — quanto mais informação, menor a chance de o BackOffice solicitar complementação.",
+    "restricoes": [
+      "Chamados sem documentação completa são rejeitados ou ficam com pendência",
+      "Após rejeição, é necessário abrir novo chamado — não é possível reabrir o anterior"
+    ],
+    "casos_validados": [
+      {
+        "descricao": "Clínica abriu múltiplos chamados para o mesmo caso por falta de documentação completa desde o início",
+        "solucao": "Orientado enviar todos os documentos e informações necessários já na primeira abertura do chamado"
+      }
+    ],
+    "faq": [
+      "Quais documentos preciso enviar no chamado de cadastro de médico?",
+      "O BackOffice rejeitou meu chamado por falta de documentação",
+      "Como evitar que o chamado seja rejeitado?",
+      "Quais informações são obrigatórias no chamado A006?",
+      "O chamado foi rejeitado várias vezes, o que estou fazendo errado?"
+    ]
+  },
+  {
+    "id": "chunk_082",
+    "titulo": "Zeev — Chamado não aparece em Executar Tarefas",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "chamado_nao_encontrado",
+    "acoes_zeev": [],
+    "conteudo": "Se um chamado não aparece em 'Executar Tarefas' no Zeev, existem três possibilidades: (1) O chamado foi finalizado ou rejeitado — nesse caso, busque em 'Acompanhar Solicitações' com o filtro 'Todas as solicitações que tenho acesso'; (2) Você está pesquisando só pelo número sem selecionar o tipo de solicitação — tente filtrar pelo tipo (ex: A006, A073); (3) O chamado está em análise pelo BackOffice e não tem pendência da clínica no momento — acompanhe por 'Acompanhar Solicitações'.",
+    "restricoes": [],
+    "casos_validados": [
+      {
+        "descricao": "Clínica não encontrava chamado 225342 em Executar Tarefas",
+        "solucao": "Orientado pesquisar sem o número, filtrar por tipo PA-06. Após investigação, o laboratório já estava cadastrado com valores divergentes"
+      }
+    ],
+    "faq": [
+      "Meu chamado sumiu do Executar Tarefas",
+      "Não consigo encontrar o chamado pelo número no Zeev",
+      "O chamado não aparece em lugar nenhum no Zeev",
+      "Como filtrar chamados por tipo no Zeev?",
+      "O chamado foi rejeitado, como saber o motivo?"
+    ]
+  },
+  {
+    "id": "chunk_083",
+    "titulo": "Zeev — Prazos de SLA por tipo de chamado (referência)",
+    "sistema": ["zeev"],
+    "categoria": "chamados",
+    "subcategoria": "sla_referencia",
+    "acoes_zeev": [],
+    "conteudo": "Os chamados do Zeev possuem prazos de SLA definidos pelo BackOffice. Especialidades com prioridade máxima no cadastro de profissionais são: Clínica Médica, Pediatria, Ginecologia, Oftalmologia, Cardiologia e Substituição de agenda de profissional. Para chamados dentro do prazo, acompanhe pelo Zeev. Para chamados fora do prazo, entre em contato com o SAF pelo (16) 2018-2330 informando o número do chamado para que seja acionado o time responsável.",
+    "especialidades_prioritarias": [
+      "Clínica Médica",
+      "Pediatria",
+      "Ginecologia",
+      "Oftalmologia",
+      "Cardiologia",
+      "Substituição de agenda de profissional"
+    ],
+    "contato_saf": "(16) 2018-2330 — segunda a sexta, 08h30 às 17h00",
+    "restricoes": [],
+    "casos_validados": [],
+    "faq": [
+      "Qual o prazo de atendimento do chamado A006?",
+      "Quais especialidades têm prioridade no cadastro?",
+      "Em quanto tempo o BackOffice responde um chamado?",
+      "O chamado está dentro do prazo normal?",
+      "Qual o SLA do Zeev para cadastro de profissional?"
     ]
   }
 ]
